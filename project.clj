@@ -20,7 +20,7 @@
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
 
-  :resource-paths ["resources" "resources/webpack" "resources/externs"]
+  :resource-paths ["resources" "resources/webpack"]
 
   :cljsbuild {:builds
               [{:id "dev"
@@ -44,7 +44,6 @@
                            :foreign-libs [{:file "resources/webpack/bundle.js"
                                            :requires ["cljsjs/react"]
                                            :provides ["webpack-bundle"]}]
-                           :externs ["resources/externs/webpack.ext.js"]
                            :source-map-timestamp true
                            ;; To console.log CLJS data-structures make sure you enable devtools in Chrome
                            ;; https://github.com/binaryage/cljs-devtools
@@ -57,6 +56,8 @@
                 :compiler {:output-to "resources/public/js/compiled/euroclojure_cljs.js"
                            :main euroclojure-cljs.core
                            :optimizations :advanced
+                           :foreign-libs [{:file "resources/webpack/bundle.js"
+                                           :provides ["webpack-bundle"]}]
                            :pretty-print false}}]}
 
   :figwheel {;; :http-server-root "public" ;; default and assumes "resources"

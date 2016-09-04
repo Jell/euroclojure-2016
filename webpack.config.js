@@ -43,13 +43,13 @@ const config = {
     loaders: [
       {
         test: /\.js$/, // All .js files
-        loader: ['babel'],
+        loader: 'babel',
         exclude: [nodeModulesPath],
         query: {
           presets: ['es2015', 'react']
         }
-      },
-    ],
+      }
+    ]
   },
 };
 
