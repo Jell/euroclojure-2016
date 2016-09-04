@@ -37,14 +37,7 @@ const config = {
     'react': 'React',
     'react-dom': 'ReactDOM',
     'react/lib/ReactFragment': 'React.addons.createFragment',
-    'react/lib/ReactTransitionGroup': 'React.addons.TransitionGroup',
-    'react/lib/EventPluginHub':
-    'react/lib/EventConstants':
-    'react/lib/EventPluginUtils':
-    'react/lib/EventPropagators':
-    'react/lib/SyntheticUIEvent':
-    'react/lib/ViewportMetrics':
-
+    'react/lib/ReactTransitionGroup': 'React.addons.TransitionGroup'
   },
   module: {
     loaders: [
