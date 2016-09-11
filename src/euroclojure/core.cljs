@@ -1,9 +1,10 @@
 (ns euroclojure.core
   (:require [reagent.core :as reagent]
             reagent.dom
-            [euroclojure.slide-1 :as slide-1]
-            [euroclojure.slide-2 :as slide-2]
-            [euroclojure.slide-3 :as slide-3]
+            [euroclojure.meta :as meta]
+            [euroclojure.solution-1 :as solution-1]
+            [euroclojure.solution-2 :as solution-2]
+            [euroclojure.solution-3 :as solution-3]
             webpack-bundle))
 
 (enable-console-print!)
@@ -15,9 +16,10 @@
 (defn slide-4 []
   [:div "Slide 4"])
 
-(def slides [#'slide-1/template
-             #'slide-2/template
-             #'slide-3/template
+(def slides [#'solution-1/slide
+             #'solution-2/slide
+             #'solution-3/slide
+             #'meta/slide
              #'slide-4])
 
 (defn next-slide []

@@ -22,4 +22,4 @@ window.StepLabel = StepLabel;
 
 window.Highlight = require('react-highlight');
 
-window.Slide3 = require("./Slide3.js");
+window.Solution3 = require("./Solution3.js");

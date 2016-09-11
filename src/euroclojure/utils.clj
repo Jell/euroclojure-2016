@@ -1,5 +1,5 @@
 (ns euroclojure.utils)
 
-(defmacro show-code [type path]
-  `[:> js/Highlight {:className type}
+(defmacro code-snippet [type path]
+  `[:> js/Highlight {:className ~type}
     ~(slurp path)])
