@@ -13,3 +13,9 @@ lein figwheel
 webpack
 lein cljsbuild once min
 ```
+
+## Deploy
+
+```
+make deploy
+```
