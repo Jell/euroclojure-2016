@@ -75,12 +75,10 @@
        [:div {:class (str "slide slide-" (inc slide-index))}
         [(nth slides slide-index)]]]]]))
 
-(defonce boot
-  (do
-    (set! (.-onkeydown js/document) on-key-down)
-    (reagent/render-component [#'layout]
-                              (. js/document (getElementById "app")))
-    :ok))
+(defn ^:export start []
+  (set! (.-onkeydown js/document) on-key-down)
+  (reagent/render-component [#'layout]
+                            (. js/document (getElementById "app"))))
 
 (defn on-js-reload []
   (reagent/force-update-all))
