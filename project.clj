@@ -1,4 +1,4 @@
-(defproject euroclojure-cljs "0.1.0-SNAPSHOT"
+(defproject euroclojure "0.1.0-SNAPSHOT"
   :description "FIXME: write this!"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -29,14 +29,14 @@
                 ;; the presence of a :figwheel configuration here
                 ;; will cause figwheel to inject the figwheel client
                 ;; into your build
-                :figwheel {:on-jsload "euroclojure-cljs.core/on-js-reload"
+                :figwheel {:on-jsload "euroclojure.core/on-js-reload"
                            ;; :open-urls will pop open your application
                            ;; in the default browser once Figwheel has
                            ;; started and complied your application.
                            ;; Comment this out once it no longer serves you.
                            :open-urls ["http://localhost:3449/index.html"]}
 
-                :compiler {:main euroclojure-cljs.core
+                :compiler {:main euroclojure.core
                            :asset-path "js/compiled/out"
                            :output-to "resources/public/js/compiled/euroclojure_cljs.js"
                            :output-dir "resources/public/js/compiled/out"
@@ -54,7 +54,7 @@
                {:id "min"
                 :source-paths ["src"]
                 :compiler {:output-to "resources/public/js/compiled/euroclojure_cljs.js"
-                           :main euroclojure-cljs.core
+                           :main euroclojure.core
                            :optimizations :advanced
                            :foreign-libs [{:file "resources/webpack/bundle.js"
                                            :provides ["webpack-bundle"]}]

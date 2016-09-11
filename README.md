@@ -1,4 +1,4 @@
-# euroclojure-cljs
+# euroclojure
 
 ## Dev mode
 
