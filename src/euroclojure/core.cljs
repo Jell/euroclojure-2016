@@ -41,7 +41,7 @@
 
 (defn stepper-component [slide-index]
   [:> js/Stepper {:activeStep slide-index
-                  :style {:width "90%"
+                  :style {:width "80%"
                           :float "left"
                           :height "30px"}}
    (map-indexed (fn [index slide]
