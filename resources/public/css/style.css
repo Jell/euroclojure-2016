@@ -1,2 +1,91 @@
-/* some style */
+/* reset */
+html,body { height: 100%; }
+body {
+  padding: 0;
+  margin: 0;
+}
 
+/* general styling */
+
+.controls {
+  width: 100%;
+  height: 30px;
+  top: 0;
+}
+.controls button {
+  float: left;
+  height: 30px;
+  width: 5%;
+}
+.slide {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  margin: 0;
+}
+
+.slide-1 {
+  background-color: red;
+}
+
+.slide-2 {
+  background-color: blue;
+}
+
+.slide-3 {
+  background-color: green;
+}
+
+/* Animations */
+
+@keyframes moveToLeft {
+  from { }
+  to { transform: translateX(-100%); }
+}
+
+@keyframes moveFromLeft {
+  from { transform: translateX(-100%); }
+}
+
+@keyframes moveToRight {
+  from { }
+  to { transform: translateX(100%); }
+}
+
+@keyframes moveFromRight {
+  from { transform: translateX(100%); }
+}
+
+
+/* Forward transition */
+.forward-enter {
+  animation: moveFromRight 0.6s ease both;
+}
+
+.forward-enter.forward-enter-active {
+}
+
+.forward-leave {
+  animation: moveToLeft 0.6s ease both;
+}
+
+.forward-leave.forward-leave-active {
+}
+
+
+/* Backward transition */
+.backward-enter {
+}
+
+.backward-enter.backward-enter-active {
+  animation: moveFromLeft 0.6s ease both;
+}
+
+.backward-leave {
+}
+
+.backward-leave.backward-leave-active {
+  animation: moveToRight 0.6s ease both;
+}
