@@ -1,15 +1,15 @@
 (ns euroclojure-cljs.core
-  (:require [reagent.core :as reagent :refer [atom]]
+  (:require [reagent.core :as reagent]
             reagent.dom
             webpack-bundle))
 
 (enable-console-print!)
 
-(defonce app-state (atom {:clicked nil}))
+(defonce app-state (reagent/atom {:clicked nil}))
 
 (defn hello-world []
   [:div
-   [:h1 (str "Clicked: " (:clicked @app-state))]
+   [:h1 (str @app-state)]
    [:> js/MuiThemeProvider {:muiTheme js/MuiTheme}
     [:> js/MyAwesomeReactComponent
      {:titles (map str (range 10))
