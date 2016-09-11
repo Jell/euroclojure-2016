@@ -11,7 +11,8 @@
                  [org.clojure/core.async "0.2.385"
                   :exclusions [org.clojure/tools.reader]]
                  [reagent "0.6.0-rc" :exclusions [cljsjs/react]]
-                 [cljsjs/react-with-addons "15.3.1-0"]]
+                 [cljsjs/react-with-addons "15.3.1-0"]
+                 [kioo "0.4.2" :exclusions [cljsjs/react om]]]
 
   :plugins [[lein-figwheel "0.5.4-7"]
             [lein-cljsbuild "1.1.3" :exclusions [[org.clojure/clojure]]]]
@@ -20,7 +21,7 @@
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
 
-  :resource-paths ["resources" "resources/webpack"]
+  :resource-paths ["resources" "resources/webpack" "resources/private"]
 
   :cljsbuild {:builds
               [{:id "dev"

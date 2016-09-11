@@ -74,15 +74,15 @@ body {
 
 /* Backward transition */
 .backward-enter {
-}
-
-.backward-enter.backward-enter-active {
   animation: moveFromLeft 0.6s ease both;
 }
 
+.backward-enter.backward-enter-active {
+}
+
 .backward-leave {
+  animation: moveToRight 0.6s ease both;
 }
 
 .backward-leave.backward-leave-active {
-  animation: moveToRight 0.6s ease both;
 }

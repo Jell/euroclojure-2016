@@ -2,6 +2,8 @@
   (:require [reagent.core :as reagent]
             reagent.dom
             [euroclojure.slide-1 :as slide-1]
+            [euroclojure.slide-2 :as slide-2]
+            [euroclojure.slide-3 :as slide-3]
             webpack-bundle))
 
 (enable-console-print!)
@@ -10,16 +12,13 @@
   (reagent/atom {:slide-index 0
                  :transition "forward"}))
 
-(defn slide-2 []
-  [:div "Slide 2"])
-
-(defn slide-3 []
-  [:div "Slide 3"])
-
 (defn slide-4 []
   [:div "Slide 4"])
 
-(def slides [#'slide-1/template #'slide-2 #'slide-3 #'slide-4])
+(def slides [#'slide-1/template
+             #'slide-2/template
+             #'slide-3/template
+             #'slide-4])
 
 (defn next-slide []
   (swap! app-state assoc :transition "forward")
@@ -68,8 +67,8 @@
         :transitionName transition
         :transitionEnter true
         :transitionLeave true
-        :transitionEnterTimeout 1000
-        :transitionLeaveTimeout 1000}
+        :transitionEnterTimeout 600
+        :transitionLeaveTimeout 600}
        ^{:key slide-index}
        [:div {:class (str "slide slide-" (inc slide-index))}
         [(nth slides slide-index)]]]]]))

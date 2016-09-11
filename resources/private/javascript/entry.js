@@ -16,10 +16,10 @@ window.MuiTheme = getMuiTheme({
   },
 });
 
-window.MyAwesomeReactComponent = require("./MyAwesomeReactComponent.js");
-
 window.Step = Step;
 window.Stepper = Stepper;
 window.StepLabel = StepLabel;
 
 window.Highlight = require('react-highlight');
+
+window.Slide3 = require("./Slide3.js");
