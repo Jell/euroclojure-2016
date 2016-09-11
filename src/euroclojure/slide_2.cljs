@@ -2,8 +2,7 @@
   (:require-macros [euroclojure.utils :refer [show-code]])
   (:require [kioo.reagent :as kioo :refer-macros [deftemplate]]))
 
-(deftemplate template "templates/slide_2.html"
-  []
+(deftemplate template "templates/slide_2.html" []
   {[:button]
    (kioo/listen :on-click #(js/alert "Clicked!"))
 
