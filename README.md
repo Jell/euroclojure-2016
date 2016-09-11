@@ -3,19 +3,17 @@
 ## Dev mode
 
 ```
-webpack --watch
-lein figwheel
+gulp dev
 ```
 
 ## Prod
 
 ```
-webpack
-lein cljsbuild once min
+gulp prod
 ```
 
 ## Deploy
 
 ```
-make deploy
+gulp deploy
 ```

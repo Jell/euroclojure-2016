@@ -13,3 +13,5 @@ pom.xml
 .nrepl-port
 node_modules
 resources/webpack
+/resources/public/css/app.css
+/resources/public/css/app.css.map
