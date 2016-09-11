@@ -10,7 +10,6 @@ pom.xml
 .lein-repl-history
 .lein-plugins/
 .repl
-.nrepl-port
 node_modules
 resources/webpack
 /resources/public/css/app.css
