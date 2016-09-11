@@ -58,6 +58,7 @@
                            :main euroclojure.core
                            :optimizations :advanced
                            :foreign-libs [{:file "resources/webpack/bundle.js"
+                                           :requires ["cljsjs/react"]
                                            :provides ["webpack-bundle"]}]
                            :pretty-print false}}]}
 
@@ -114,4 +115,4 @@
                                   :init (set! *print-length* 50)
                                   :nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}}}
 
-)
+  )
