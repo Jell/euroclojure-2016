@@ -47,7 +47,8 @@
    (map-indexed (fn [index slide]
                   ^{:key index}
                   [:> js/Step
-                   [:> js/StepLabel ""]]) slides)])
+                   [:> js/StepLabel ""]])
+                slides)])
 
 (defn layout []
   (let [{:keys [slide-index transition]} @app-state]
