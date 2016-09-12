@@ -1,5 +1,12 @@
 # euroclojure
 
+## Dependencies
+```
+lein
+npm
+gulp
+```
+
 ## Dev mode
 
 ```
