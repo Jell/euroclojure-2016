@@ -30,7 +30,7 @@
          :target "_blank"}
      "https://github.com/Jell/euroclojure-2016"]
     [:br]
-    [:> js/Webcam {:height "400px" :width "400px"}]]
+    [:> js/Webcam {:height "400px" :width "400px" :audio false}]]
    [:div {:style {:transform (str "scale(0.618,0.618)")
                   :margin-left "30%"}}
     children]])
