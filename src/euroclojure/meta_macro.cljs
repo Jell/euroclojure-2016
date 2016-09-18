@@ -1,4 +1,4 @@
-(ns euroclojure.meta
+(ns euroclojure.meta-macro
   (:require-macros [euroclojure.utils :refer [code-snippet]]))
 
 (defn slide []

@@ -33,8 +33,27 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  padding: 5%;
+  padding: 0 5%;
   margin: 0;
+}
+
+.with-parens:before {
+  position: fixed;
+  font-size: 100px;
+  transform:scale(0.5,3);
+  content: "(";
+}
+
+.with-parens {
+  margin: 0 50px;
+  display: inline;
+}
+
+.with-parens:after {
+  position: fixed;
+  font-size: 100px;
+  transform:scale(0.5,3);
+  content: ")";
 }
 
 /* Animations */

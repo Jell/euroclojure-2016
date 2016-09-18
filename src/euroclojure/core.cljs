@@ -1,7 +1,8 @@
 (ns euroclojure.core
   (:require [reagent.core :as reagent]
             reagent.dom
-            [euroclojure.meta :as meta]
+            [euroclojure.meta-meta :as meta-meta]
+            [euroclojure.meta-macro :as meta-macro]
             [euroclojure.solution-1 :as solution-1]
             [euroclojure.solution-2 :as solution-2]
             [euroclojure.solution-3 :as solution-3]
@@ -16,10 +17,11 @@
 (defn slide-4 []
   [:div "Slide 4"])
 
-(def slides [#'solution-1/slide
+(def slides [#'meta-meta/slide
+             #'solution-1/slide
              #'solution-2/slide
              #'solution-3/slide
-             #'meta/slide
+             #'meta-macro/slide
              #'slide-4])
 
 (defn next-slide []
