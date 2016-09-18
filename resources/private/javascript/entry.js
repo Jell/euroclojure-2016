@@ -21,6 +21,5 @@ window.Stepper = Stepper;
 window.StepLabel = StepLabel;
 
 window.Highlight = require('react-highlight');
-
 window.Solution3 = require("./Solution3.js");
 window.Webcam = require('react-webcam');
