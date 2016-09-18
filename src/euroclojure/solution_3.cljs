@@ -1,5 +1,6 @@
 (ns euroclojure.solution-3
-  (:require-macros [euroclojure.utils :refer [code-snippet]]))
+  (:require-macros [euroclojure.utils :refer [code-snippet]])
+  (:require webpack-bundle))
 
 (defn slide []
   [:> js/Solution3 {:callback #(js/alert "Clicked!")}

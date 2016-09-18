@@ -2,7 +2,7 @@
   (:require-macros [euroclojure.utils :refer [code-snippet]]))
 
 (defn slide []
-  [:div
+  [:div.slide-padding
    [:h1 "Solution 1: pure ClojureScript"]
    [:button {:on-click #(js/alert "Clicked!")}
     "Click Me!"]

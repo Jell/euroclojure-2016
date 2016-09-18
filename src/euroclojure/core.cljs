@@ -1,6 +1,10 @@
 (ns euroclojure.core
   (:require [reagent.core :as reagent]
             reagent.dom
+            [euroclojure.me :as me]
+            [euroclojure.zimpler :as zimpler]
+            [euroclojure.demo :as demo]
+            [euroclojure.architecture :as architecture]
             [euroclojure.meta-meta :as meta-meta]
             [euroclojure.meta-macro :as meta-macro]
             [euroclojure.solution-1 :as solution-1]
@@ -14,15 +18,15 @@
   (reagent/atom {:slide-index 0
                  :transition "forward"}))
 
-(defn slide-4 []
-  [:div "Slide 4"])
-
-(def slides [#'meta-meta/slide
+(def slides [#'me/slide
+             #'zimpler/slide
+             #'demo/slide
+             #'architecture/slide
+             #'meta-meta/slide
              #'solution-1/slide
              #'solution-2/slide
              #'solution-3/slide
-             #'meta-macro/slide
-             #'slide-4])
+             #'meta-macro/slide])
 
 (defn next-slide []
   (swap! app-state assoc :transition "forward")
