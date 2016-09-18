@@ -59,6 +59,18 @@ li {
   width: 100%;
 }
 
+pre.path {
+  background-color: #DDD;
+  margin-bottom: 0;
+  margin-top: 10px;
+  padding: 1px 10px;
+}
+pre {
+  margin-top: 0;
+  border: solid;
+  border-color: #DDD;
+}
+
 /* Animations */
 
 @keyframes moveToLeft {
