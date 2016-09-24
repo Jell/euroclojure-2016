@@ -1,4 +1,5 @@
-(ns euroclojure.architecture)
+(ns euroclojure.architecture
+  (:require [euroclojure.icons :as icons]))
 
 (defn slide []
   [:div.slide.left
@@ -9,4 +10,7 @@
      "re-frame (and reagent), tower, kioo, honeybadger"]
     [:li [:b "Tooling: "]
      "lein, figwheel, lein-doo, phantomjs, browser-sync, gulp, npm, bower, webpack, sass..."]]
-   [:em.centered "A lot of tooling to setup!"]])
+   [:h3 {:style {:text-align "center"}}
+    (repeat 4 icons/screaming-in-fear)
+    [:em " A lot of tooling to setup! "]
+    (repeat 4 icons/screaming-in-fear)]])

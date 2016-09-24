@@ -1,5 +1,6 @@
 (ns euroclojure.meta-meta
-  (:require [reagent.core :as reagent]))
+  (:require [reagent.core :as reagent]
+            [euroclojure.icons :as icons]))
 
 (def colors ["#EEE"
              "#EEE"
@@ -11,6 +12,19 @@
              "#999"
              "#888"
              "#000"])
+
+(defn webcam []
+  [:> js/Webcam {:height "400px" :width "400px" :audio false}])
+
+(defn meta-content []
+  [:div
+   [:h1 "Meta "
+    [:span {:style {:font-size "150%"}} icons/point-right]]
+   [:p "Slides are demo are examples"]
+   [:a {:href "https://github.com/Jell/euroclojure-2016"
+        :target "_blank"}
+    "https://github.com/Jell/euroclojure-2016"]
+   [:br]])
 
 (defn slide-recursion [children n]
   [:div
@@ -24,18 +38,15 @@
                   :width "80%"
                   :z-index (- 9999 n)
                   :float "left"}}
-    [:h1 "Meta"]
-    [:p "Slides are demo are examples"]
-    [:a {:href "https://github.com/Jell/euroclojure-2016"
-         :target "_blank"}
-     "https://github.com/Jell/euroclojure-2016"]
-    [:br]
-    [:> js/Webcam {:height "400px" :width "400px" :audio false}]]
+    [meta-content]
+    [webcam]]
    [:div {:style {:transform (str "scale(0.618,0.618)")
                   :margin-left "30%"}}
     children]])
 
-(defn slide []
+(defn slide [{:keys [speaker]}]
   [:div.slide.vertical-center {:style {:font-size "large"
                                        :height "666px"}}
-   (reduce slide-recursion [:p "..."] (range 10))])
+   (if speaker
+     [meta-content]
+     (reduce slide-recursion [:p "..."] (range 10)))])

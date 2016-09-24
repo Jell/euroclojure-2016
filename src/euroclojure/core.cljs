@@ -1,4 +1,5 @@
 (ns euroclojure.core
+  (:require-macros [euroclojure.inline :refer [inline-file]])
   (:require [reagent.core :as reagent]
             reagent.dom
             [euroclojure.me :as me]
@@ -92,20 +93,72 @@
            (next-slide))
       :skip)))
 
+(defn theme [child]
+  [:> js/MuiThemeProvider {:muiTheme js/MuiTheme}
+   child])
+
 (defn layout []
   (let [{:keys [slide-index transition]} @app-state]
-    [:> js/MuiThemeProvider {:muiTheme js/MuiTheme}
+    [theme
      [:div
       [controls slide-index]
       [slide-transition {:transition-name transition
                          :index slide-index}
        [(nth slides slide-index)]]]]))
 
+(defn the-end []
+  [:div.slide.centered
+   [:h1 "The end"]])
+
+(defn speaker-view []
+  (let [slides-plus-end (conj slides the-end)
+        {:keys [slide-index]} @app-state]
+    [theme
+     [:div
+      [:div {:style {:width "530px"
+                     :height "650px"
+                     :padding 0
+                     :margin "30px"
+                     :display "block"
+                     :border "1px solid"
+                     :float "left"}}
+       [(nth slides slide-index)
+        {:speaker true}]]
+      [:div {:style {:width "530px"
+                     :height "650px"
+                     :padding 0
+                     :margin "30px"
+                     :display "block"
+                     :border "1px solid"
+                     :float "right"}}
+       [(nth slides-plus-end (inc slide-index))
+        {:speaker true}]]]]))
+
+(defn- make-popup-div []
+  (when-let [new-window (.open js/window ""
+                               "Euroclojure Speaker View"
+                               "width=1200, height=900")]
+    (let [document (.-document new-window)
+          body (.-body document)]
+      ;; Need to reset the body to not confuse react
+      (set! (.-innerHTML body)
+            (inline-file "resources/public/speaker.html"))
+      (set! (.-onkeydown document) on-key-down)
+      (.getElementById document "speaker"))))
+
+(defn popup-speaker-view []
+  (when-let [speaker-div (make-popup-div)]
+    (reagent/render-component
+     [#'speaker-view]
+     speaker-div)))
+
 (defn ^:export start []
   (set! (.-onkeydown js/document) on-key-down)
   (set! (.-onresize js/document.body) reagent/force-update-all)
+  (popup-speaker-view)
   (reagent/render-component [#'layout]
                             (. js/document (getElementById "app"))))
 
 (defn on-js-reload []
+  (popup-speaker-view)
   (reagent/force-update-all))

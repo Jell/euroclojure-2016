@@ -37,7 +37,6 @@ li {
 
 .slide {
   display: block;
-  width: 100%;
   padding: 0;
   margin: 0;
   font-size: xx-large;
@@ -53,7 +52,7 @@ li {
   }
 
   &.left {
-    padding: 0 5%;
+    margin: 0 5%;
   }
 
   &.centered {
