@@ -52,8 +52,10 @@
                           :height "30px"}}
    (map-indexed (fn [index slide]
                   ^{:key index}
-                  [:> js/Step
-                   [:> js/StepLabel ""]])
+                  [:> js/Step {:style {:height "30px"
+                                       :padding 0}}
+                   [:> js/StepLabel {:style {:height "30px"
+                                             :padding 0}}]])
                 slides)])
 
 (defn layout []
