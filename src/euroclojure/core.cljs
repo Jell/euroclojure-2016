@@ -60,7 +60,8 @@
   (let [{:keys [slide-index transition]} @app-state]
     [:> js/MuiThemeProvider {:muiTheme js/MuiTheme}
      [:div
-      [:div {:class "controls"}
+      [:div {:class "controls"
+             :style {:height "30px"}}
        [:button (if (< 0 slide-index)
                   {:on-click previous-slide}
                   {:disabled true})
@@ -79,11 +80,13 @@
         :transitionEnterTimeout 600
         :transitionLeaveTimeout 600}
        ^{:key slide-index}
-       [:div {:class (str "slide slide-" (inc slide-index))}
+       [:div {:class "slide"
+              :style {:height (str (- js/window.innerHeight 30) "px")}}
         [(nth slides slide-index)]]]]]))
 
 (defn ^:export start []
   (set! (.-onkeydown js/document) on-key-down)
+  (set! (.-onresize js/document.body) reagent/force-update-all)
   (reagent/render-component [#'layout]
                             (. js/document (getElementById "app"))))
 
