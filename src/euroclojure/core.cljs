@@ -142,7 +142,12 @@
           body (.-body document)]
       ;; Need to reset the body to not confuse react
       (set! (.-innerHTML body)
-            (inline-file "resources/public/speaker.html"))
+            (str "<style>"
+                 (inline-file "resources/public/css/euroclojure.css")
+                 (inline-file "resources/public/css/app.css")
+                 (inline-file "resources/public/css/solarized-light.css")
+                 "</style>"
+                 (inline-file "resources/public/speaker.html")))
       (set! (.-onkeydown document) on-key-down)
       (.getElementById document "speaker"))))
 
