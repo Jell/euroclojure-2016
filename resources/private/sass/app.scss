@@ -6,6 +6,7 @@ html, body {
 body {
   padding: 0;
   margin: 0;
+  font-size: xx-large;
 }
 
 li {
@@ -36,27 +37,31 @@ li {
 }
 
 .slide {
-  position: fixed;
   display: block;
   width: 100%;
   padding: 0;
   margin: 0;
-  overflow: scroll;
 
-  .slide-padding {
+  h2 {
+    margin: 20px;
+  }
+
+  &.vertical-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.left {
     padding: 0 5%;
   }
 
-  .centered {
+  &.centered {
     text-align: center;
     width: 100%;
   }
 
-  .large-text {
-    font-size: xx-large;
-  }
-
-  .full-width {
+  &.full-width {
     width: 100%;
   }
 
@@ -64,6 +69,8 @@ li {
     margin-top: 0;
     border: solid;
     border-color: #DDD;
+    font-size: x-large;
+    overflow-x: scroll;
 
     &.path {
       background-color: #DDD;

@@ -1,0 +1,7 @@
+(ns euroclojure.icons)
+(def heart "\uD83D\uDC96")
+(def heart-with-ribbon "\uD83D\uDC9D")
+(def revolving-hearts "\uD83D\uDC9E")
+(def cold-sweat "\uD83D\uDE30")
+(def smirking "\uD83D\uDE0F")
+(def expressionless "\uD83D\uDE11")

@@ -61,7 +61,6 @@
 	}
 
 	ul, ol {
-		list-style: circle;
 		list-style-position: inside;
 		padding-left: 10px;
 		margin-left: 5px;

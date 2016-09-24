@@ -36,5 +36,6 @@
     children]])
 
 (defn slide []
-  [:div.no-padding {:style {:width "100%"}}
+  [:div.slide.vertical-center {:style {:font-size "large"
+                                       :height "666px"}}
    (reduce slide-recursion [:p "..."] (range 10))])

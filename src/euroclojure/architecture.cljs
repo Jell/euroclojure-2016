@@ -1,7 +1,7 @@
 (ns euroclojure.architecture)
 
 (defn slide []
-  [:div.slide-padding.large-text
+  [:div.slide.left
    [:h2 "Architecture"]
    [:ul
     [:li "Rails App \u2192 Rails API + ClojureScript App"]

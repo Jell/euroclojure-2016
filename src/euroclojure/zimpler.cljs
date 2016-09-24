@@ -1,7 +1,7 @@
 (ns euroclojure.zimpler)
 
 (defn slide []
-  [:div.centered.large-text
+  [:div.slide.centered
    [:img {:src "images/zimpler.png" :height "100px"}]
    [:br]
    [:img {:src "images/team.jpg" :height "300px"}]

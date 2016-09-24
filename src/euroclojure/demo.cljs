@@ -1,7 +1,7 @@
 (ns euroclojure.demo)
 
 (defn slide []
-  [:div.large-text.centered
+  [:div.slide.centered
    [:h1 "Demo"]
    [:a {:href "https://demo.zimpler.net"
         :target "_blank"}
