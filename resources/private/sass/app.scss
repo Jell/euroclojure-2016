@@ -12,16 +12,15 @@ li {
   line-height: 180%;
 }
 
-/* general styling */
+ul {
+  margin: 30px 5px;
+  padding: 0;
+}
 
+/* general styling */
 .loading {
   text-align: center;
   width: 100%;
-
-  ul {
-    margin: 0;
-    padding: 0;
-  }
 }
 
 .controls {

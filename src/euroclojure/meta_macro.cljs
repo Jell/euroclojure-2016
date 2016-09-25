@@ -3,5 +3,5 @@
 
 (defn slide []
   [:div.slide
-   [:h2 "Meta: code snippet macro"]
+   [:h2 "Bonus: code snippet macro"]
    (code-snippet "clojure" "src/euroclojure/utils.clj")])

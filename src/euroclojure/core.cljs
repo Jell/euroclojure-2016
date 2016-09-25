@@ -13,6 +13,11 @@
             [euroclojure.solution-1 :as solution-1]
             [euroclojure.solution-2 :as solution-2]
             [euroclojure.solution-3 :as solution-3]
+            [euroclojure.good-things :as good-things]
+            [euroclojure.bad-things :as bad-things]
+            [euroclojure.hacks :as hacks]
+            [euroclojure.consensus :as consensus]
+            [euroclojure.prototype :as prototype]
             webpack-bundle))
 
 (enable-console-print!)
@@ -24,14 +29,19 @@
 
 (def slides [me/slide
              zimpler/slide
+             motivation/slide
+             consensus/slide
+             prototype/slide
              demo/slide
              architecture/slide
-             motivation/slide
              meta-meta/slide
              designers/slide
              solution-1/slide
              solution-2/slide
              solution-3/slide
+             good-things/slide
+             bad-things/slide
+             hacks/slide
              meta-macro/slide])
 
 (defn next-slide []
@@ -138,6 +148,7 @@
         {:keys [slide-index]} @app-state]
     [theme
      [:div
+      [stepper-component slide-index]
       [clock]
       [speaker-slide "left" (nth slides slide-index)]
       [speaker-slide "right" (nth slides-plus-end (inc slide-index))]]]))

@@ -1,6 +1,5 @@
 (ns euroclojure.meta-meta
-  (:require [reagent.core :as reagent]
-            [euroclojure.icons :as icons]))
+  (:require [reagent.core :as reagent]))
 
 (def colors ["#EEE"
              "#EEE"
@@ -18,8 +17,7 @@
 
 (defn meta-content []
   [:div
-   [:h1 "Meta "
-    [:span {:style {:font-size "150%"}} icons/point-right]]
+   [:h1 "Meta"]
    [:p "Slides are demo are examples"]
    [:a {:href "https://github.com/Jell/euroclojure-2016"
         :target "_blank"}
