@@ -9,4 +9,5 @@
    [:div icons/sweden " from Göteborg, Sweden " icons/sweden]
    [:div icons/heart " Clojure " icons/heart ]
    [:div "Organizer of "
-    [:a {:href "https://www.meetup.com/got-lambda/"} "Got.λ"]]])
+    [:a {:href "https://www.meetup.com/got-lambda/"
+         :target "_blank"} "Got.λ"]]])

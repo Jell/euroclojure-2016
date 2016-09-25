@@ -19,7 +19,8 @@
 
 (defonce app-state
   (reagent/atom {:slide-index 0
-                 :transition "forward"}))
+                 :transition "forward"
+                 :time 0}))
 
 (def slides [me/slide
              zimpler/slide
@@ -110,29 +111,36 @@
   [:div.slide.centered
    [:h1 "The end"]])
 
+(defn speaker-slide [position slide]
+  [:div {:style {:width "530px"
+                 :height "650px"
+                 :padding 0
+                 :margin "15px 30px"
+                 :display "block"
+                 :border "1px solid"
+                 :float position}}
+   [slide {:speaker true}]])
+
+(defn clock []
+  (let [{:keys [time]} @app-state
+        secs (mod time 60)
+        mins (quot time 60)]
+    [:div {:style {:width "100%"
+                   :text-align "center"
+                   :color (if (>= mins 30) "red" "black")
+                   :font-size "xx-large"}}
+     (str (when (< mins 10) "0") mins
+          ":"
+          (when (< secs 10) "0") secs)]))
+
 (defn speaker-view []
   (let [slides-plus-end (conj slides the-end)
         {:keys [slide-index]} @app-state]
     [theme
      [:div
-      [:div {:style {:width "530px"
-                     :height "650px"
-                     :padding 0
-                     :margin "30px"
-                     :display "block"
-                     :border "1px solid"
-                     :float "left"}}
-       [(nth slides slide-index)
-        {:speaker true}]]
-      [:div {:style {:width "530px"
-                     :height "650px"
-                     :padding 0
-                     :margin "30px"
-                     :display "block"
-                     :border "1px solid"
-                     :float "right"}}
-       [(nth slides-plus-end (inc slide-index))
-        {:speaker true}]]]]))
+      [clock]
+      [speaker-slide "left" (nth slides slide-index)]
+      [speaker-slide "right" (nth slides-plus-end (inc slide-index))]]]))
 
 (defn- make-popup-div []
   (when-let [new-window (.open js/window ""
@@ -161,6 +169,7 @@
   (set! (.-onkeydown js/document) on-key-down)
   (set! (.-onresize js/document.body) reagent/force-update-all)
   (popup-speaker-view)
+  (js/setInterval #(swap! app-state update :time inc) 1000)
   (reagent/render-component [#'layout]
                             (. js/document (getElementById "app"))))
 

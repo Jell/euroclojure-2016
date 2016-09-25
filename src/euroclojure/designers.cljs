@@ -4,6 +4,7 @@
 (defn slide []
   [:div.slide.left
    [:h1 "Working with Designers"]
+   [:p "Different profiles"]
    [:ul
     [:li [:b "Profile 1:"] " " icons/heart-with-ribbon " PhotoShop"]
     [:li [:b "Profile 2:"] " " icons/heart " HTML + CSS/SASS/LESS"]
