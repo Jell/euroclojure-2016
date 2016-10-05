@@ -2,6 +2,8 @@
   (:require-macros [euroclojure.inline :refer [inline-file]])
   (:require [reagent.core :as reagent]
             reagent.dom
+            [euroclojure.introduction :as introduction]
+            [euroclojure.scale :as scale]
             [euroclojure.me :as me]
             [euroclojure.zimpler :as zimpler]
             [euroclojure.demo :as demo]
@@ -11,13 +13,18 @@
             [euroclojure.meta-meta :as meta-meta]
             [euroclojure.meta-macro :as meta-macro]
             [euroclojure.solution-1 :as solution-1]
+            [euroclojure.solution-1-tradeoffs :as solution-1-tradeoffs]
             [euroclojure.solution-2 :as solution-2]
+            [euroclojure.solution-2-tradeoffs :as solution-2-tradeoffs]
             [euroclojure.solution-3 :as solution-3]
+            [euroclojure.solution-3-tradeoffs :as solution-3-tradeoffs]
             [euroclojure.good-things :as good-things]
             [euroclojure.bad-things :as bad-things]
             [euroclojure.hacks :as hacks]
             [euroclojure.consensus :as consensus]
             [euroclojure.prototype :as prototype]
+            [euroclojure.conclusion :as conclusion]
+            [euroclojure.thanks :as thanks]
             webpack-bundle))
 
 (enable-console-print!)
@@ -27,21 +34,28 @@
                  :transition "forward"
                  :time 0}))
 
-(def slides [me/slide
+(def slides [introduction/slide
+             #_ me/slide
              zimpler/slide
              motivation/slide
              consensus/slide
              prototype/slide
+             scale/slide
              demo/slide
              architecture/slide
              meta-meta/slide
              designers/slide
              solution-1/slide
+             solution-1-tradeoffs/slide
              solution-2/slide
+             solution-2-tradeoffs/slide
              solution-3/slide
+             solution-3-tradeoffs/slide
              good-things/slide
              bad-things/slide
              hacks/slide
+             conclusion/slide
+             thanks/slide
              meta-macro/slide])
 
 (defn next-slide []

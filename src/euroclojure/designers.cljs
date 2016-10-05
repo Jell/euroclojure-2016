@@ -1,6 +1,6 @@
 (ns euroclojure.designers)
 
-(defn slide []
+(defn slide [context]
   [:div.slide.left
    [:h1 "Working with Designers"]
    [:p "Different profiles"]

@@ -2,7 +2,7 @@
   (:require-macros [euroclojure.utils :refer [code-snippet]])
   (:require webpack-bundle))
 
-(defn slide []
+(defn slide [context]
   [:> js/Solution3 {:callback #(js/alert "Clicked!")}
    [:div
     (code-snippet "jsx" "resources/private/javascript/Solution3.js")

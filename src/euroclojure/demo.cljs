@@ -1,11 +1,8 @@
 (ns euroclojure.demo)
 
-(defn slide []
+(defn slide [context]
   [:div.slide.centered
    [:h1 "Demo"]
-   [:a {:href "https://demo.zimpler.net"
+   [:a {:href "https://demo-checkout.zimpler.net/demo.html"
         :target "_blank"}
-    "https://demo.zimpler.net"]
-   [:br]
-   [:br]
-   [:p "(Need a Swedish or Finnish number, or use 0700000000)"]])
+    "https://demo-checkout.zimpler.net/demo.html"]])

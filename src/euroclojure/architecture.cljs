@@ -1,11 +1,12 @@
 (ns euroclojure.architecture
   (:require [euroclojure.icons :as icons]))
 
-(defn slide []
+(defn slide [context]
   [:div.slide.left
    [:h2 "Architecture"]
    [:ul
     [:li "Rails App " icons/right-arrow " Rails API (backend) + ClojureScript App (frontend)"]
+    [:li "Structure of the app evolved organically from a single namespace"]
     [:li [:b "Libraries: "]
      "re-frame (and reagent), tower, kioo, honeybadger"]
     [:li [:b "Hosting: "]

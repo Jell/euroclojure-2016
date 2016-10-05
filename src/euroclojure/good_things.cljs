@@ -1,6 +1,6 @@
 (ns euroclojure.good-things)
 
-(defn slide []
+(defn slide [context]
   [:div.slide.left
    [:h2 "Good things"]
    [:h3 "re-frame"]

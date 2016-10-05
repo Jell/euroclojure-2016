@@ -1,6 +1,6 @@
 (ns euroclojure.consensus)
 
-(defn slide []
+(defn slide [context]
   [:div.slide.left
    [:h2 "Consensus first!"]
    [:ul

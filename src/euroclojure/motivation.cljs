@@ -1,7 +1,7 @@
 (ns euroclojure.motivation
   (:require [euroclojure.icons :as icons]))
 
-(defn slide []
+(defn slide [context]
   [:div.slide.left
    [:h2 "Goal: New checkout Application"]
    [:h3 "Starting point"]

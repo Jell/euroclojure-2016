@@ -1,6 +1,6 @@
 (ns euroclojure.hacks)
 
-(defn slide []
+(defn slide [context]
   [:div.slide.left
    [:h2 "Hacks"]
    [:ul

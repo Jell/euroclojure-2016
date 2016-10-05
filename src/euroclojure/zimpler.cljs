@@ -2,7 +2,7 @@
   (:require-macros [euroclojure.inline :refer [img]])
   (:require [euroclojure.icons :as icons]))
 
-(defn slide []
+(defn slide [context]
   [:div.slide.centered
    (img {:src "images/zimpler.png" :height "100px"})
    [:br]

@@ -2,7 +2,7 @@
   (:require-macros [euroclojure.inline :refer [img]])
   (:require [euroclojure.icons :as icons]))
 
-(defn slide []
+(defn slide [context]
   [:div.slide.centered
    [:h2 "Hello!"]
    (img {:src "images/shining.png" :height "300px"})

@@ -1,0 +1,30 @@
+* Introduction
+
+** what am I talk about
+** This is story from blabla to blabla
+** Make explicit target audience
+
+* Time-travelling debugger demo
+** Why it's possible
+
+* Some beginner talk
+** How things connects togethers
+** How do you deploy
+
+* How did other developpers learn
+** How did the designer deal with the change of language
+** How did the designers deal with the change of programming language? Are they still struggling?
+
+* How many fell into each category (1,2, or 3)?
+
+* Design of the application?
+
+* More Bad things
+
+* Better visual / more pointing
+
+* Ruby
+
+* How the structure emerged from the code / agile
+
+* Add a conclusion
