@@ -126,10 +126,10 @@
   (let [{:keys [slide-index transition]} @app-state]
     [theme
      [:div
-      [controls slide-index]
       [slide-transition {:transition-name transition
                          :index slide-index}
-       [(nth slides slide-index)]]]]))
+       [(nth slides slide-index)]]
+      [controls slide-index]]]))
 
 (defn the-end []
   [:div.slide.centered

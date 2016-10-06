@@ -4,6 +4,7 @@
 (defn slide [context]
   [:div.slide
    [:h2 "Solution 1: pure ClojureScript"]
-   [:button {:on-click #(js/alert "Clicked!")}
-    "Click Me!"]
+   [:div.demo-container
+    [:button.big-button {:on-click #(js/alert "Clicked!")}
+     "Click Me!"]]
    (code-snippet "clojure" "src/euroclojure/solution_1.cljs")])

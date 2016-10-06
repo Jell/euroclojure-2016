@@ -4,6 +4,7 @@
 (defn slide [context]
   [:div.slide.left
    [:h2 "Bad things"]
+   [:h3 "Externs"]
    [:h3 "Broken iOS safari JIT compiler on iPhone 4"]
    [:ul
     [:li "Buggy bit operations triggered by JIT optimization"]
