@@ -176,7 +176,6 @@
       ;; Need to reset the body to not confuse react
       (set! (.-innerHTML body)
             (str "<style>"
-                 (inline-file "resources/public/css/euroclojure.css")
                  (inline-file "resources/public/css/app.css")
                  (inline-file "resources/public/css/solarized-light.css")
                  "</style>"
