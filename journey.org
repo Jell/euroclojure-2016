@@ -1,0 +1,132 @@
+* Introduction
+
+* Won't go into details
+** But...
+
+* Meta Meta
+
+* Zimpler
+
+* Scale
+
+* Where did we start?
+** 3 Rails apps in production
+** AWS infrastructure
+** Don't like front-end stuff
+** Have a slack bot written in Clojure
+** Like Clojure
+** Value simplicity and agility
+** Believe in empowering people
+
+* Clojure vs Ruby
+** Where are things coming from?
+** Namespace
+** Single-pass compilation
+
+* Motivation
+
+* What kind of app?
+** Pure front-end talking to API
+** Keep backend logic in existing Rails app
+** Turn Rails app into pure JSON REST API
+
+* Prototyping - Phase 1
+** Designer works on HTML + CSS (SASS) prototype
+** Devs work on "backend of front-end"
+*** API Call
+*** Deploy
+    aws s3 sync ./resources/public s3://portal-app/
+=> Fast iterations independent of each other
+
+* Prototyping - Phase 2
+** Use the HTML from prototype as templates using enfocus
+** Everything in a single namespace
+** No tests yet
+** Makefile
+** 130 lines of code
+=> Working prototype ready, but slow feedback loop
+
+* Improve feedback loop
+** Introduce Figwheel
+** Use Foreman to run tasks in parallel (SASS watcher, figwheel)
+** Add auto-tests with lein-doo
+=> hot-code swapping, sub-second feedback loop
+
+* Start UX testing
+** SLOOOOOW
+** Direct-DOM manipulation to blame in our case
+
+* Speed up rendering
+** Introduce react with reagent
+** drop-in replacement of enfocus with kioo
+=> If you do a lot of DOM manipulation, use a virtual DOM
+
+* Oh noes! Bug!
+** Doesn't work in safari & iphone without advanced compilation!
+** Solution: :static-fns true compiler option
+** Can't use figwheel with safari or iphone :/
+
+* Localization
+** Running in 2 countries, 3 locales
+** PhraseApp for collaborative work
+** Pull localization as JSON file
+** tower + custom attribute
+<code snippet>
+
+* Going live with MVP!
+** Add cache busting via Grunt task
+** Add SSL certificates with CloudFront
+** Add Honeybadger for error logging
+** Add Travis for CI
+
+* Demo
+
+* Oh noes! Bug!
+** Failures in prod
+** 1 week investigation...
+** reason: Broken iOS safari JIT compiler on iPhone 4!
+** Redefine ClojureScript's polyfill of Math.imul as workaround
+=> The worst! :( not what we signed up for
+
+* Keep evolving
+** re-frame for better state handling
+** npm for JS dev dependencies
+** bower for JS app dependencies
+** gulp to replace Foreman + Make + Entr
+=> Only add complexity when needed, not earlier
+
+* Using JS libraries
+** Use cljsjs when possible
+** Bower + extern file
+** npm + webpack if need be (future work)
+=> Be mindful of extra complexity
+
+* Lessons learned
+
+* Working with designers
+
+* Solution 1
+
+* Solution 2
+
+* Solution 3
+
+* Good things
+
+* Bad things
+
+* Consensus
+
+* Conclusion
+
+* Thanks
+
+* Hacks
+
+* Hacks - 2
+** When changing the HTML template, need to re-compile the enfocus code
+** Use Entr to touch cljs file on html file change http://entrproject.org/
+
+find resources/public/templates | entr ./bin/reload-templates.sh  1>&2
+
+* Meta macro

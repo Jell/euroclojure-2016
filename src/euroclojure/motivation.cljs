@@ -13,6 +13,5 @@
 
    [:h3 "Constraints"]
    [:ul
-    [:li "Designers need to be empowered"]
-    [:li "Programmers should not need Emacs"]
-    [:li "Do everything Rails asset pipeline does"]]])
+    [:li "Designers should be empowered"]
+    [:li "Programmers should not need Emacs"]]])

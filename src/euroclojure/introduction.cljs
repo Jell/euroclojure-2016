@@ -7,5 +7,5 @@
    [:ul
     [:li "Who are we?"]
     [:li "What are we aiming for?"]
-    [:li "How is ClojureScript helping us reach our goals?"]
-    [:li "What did we learn in the process?"]]])
+    [:li "How did ClojureScript help us reach our goals?"]
+    [:li "What have we learnt in the process?"]]])

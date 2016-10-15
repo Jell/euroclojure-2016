@@ -12,5 +12,5 @@
    [:ul
     [:li "Sweden (Göteborg & Stockholm)"]
     [:li "Founded in 2012"]
-    [:li "27 employees "]
+    [:li "27 employees (7 devs, 2 designers)"]
     [:li "Mobile Payment"]]])
