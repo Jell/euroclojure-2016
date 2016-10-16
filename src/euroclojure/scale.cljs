@@ -4,7 +4,7 @@
   [:div.slide.left
    [:h1 "Scale"]
    [:ul
-    [:li "7 developpers, 2 designers"]
+    [:li "7 developers, 2 designers"]
     [:li "2 countries, 3 locales"]
     [:li "≈600 daily users"]
     [:li "60 000€ worth of payments per day"]

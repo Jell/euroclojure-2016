@@ -9,5 +9,5 @@
     [:li "Pure ClojureScript, known abstraction"]]
    [:h3 "Cons:"]
    [:ul
-    [:li "All implementation done by developpers"]]
+    [:li "All implementation done by developers"]]
    [:h3 "Common language: visual sketches"]])

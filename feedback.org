@@ -11,7 +11,7 @@
 ** How things connects togethers
 ** How do you deploy
 
-* How did other developpers learn
+* How did other developers learn
 ** How did the designer deal with the change of language
 ** How did the designers deal with the change of programming language? Are they still struggling?
 
