@@ -17,6 +17,7 @@
             [euroclojure.introduction :as introduction]
             [euroclojure.jsx-demo :as jsx-demo]
             [euroclojure.kioo-demo :as kioo-demo]
+            [euroclojure.localized :as localized]
             [euroclojure.meta-macro :as meta-macro]
             [euroclojure.meta-meta :as meta-meta]
             [euroclojure.motivation :as motivation]
@@ -67,6 +68,7 @@
              conclusion/slide
 
              thanks/slide
+             localized/slide
              hacks/slide
              tools/slide
              meta-macro/slide])
