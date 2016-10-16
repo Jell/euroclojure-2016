@@ -4,7 +4,7 @@
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
    [:h2 "Goal: New checkout Application"]
-   [:h3 "Existing pain-points with Rails app"]
+   [:h3 "Existing pain-points with Rails apps"]
    [:ul
     [:li "Braided flow, state and view logic"]
     (when speaker

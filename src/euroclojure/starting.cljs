@@ -2,7 +2,7 @@
 
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
-   [:h1 "Where did we start?"]
+   [:h1 "18 months ago"]
    [:ul
     [:li "3 Rails apps in production"]
     [:li "AWS infrastructure"]

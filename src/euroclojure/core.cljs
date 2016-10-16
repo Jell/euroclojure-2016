@@ -58,7 +58,7 @@
              good-things/slide
              bad-things/slide
              consensus/slide
-             prototype/slide
+             #_prototype/slide
              conclusion/slide
              thanks/slide
              hacks/slide
