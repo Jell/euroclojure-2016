@@ -13,7 +13,6 @@
             [euroclojure.enfocus-demo :as enfocus-demo]
             [euroclojure.feedback-loop :as feedback-loop]
             [euroclojure.improve :as improve]
-            [euroclojure.architecture :as architecture]
             [euroclojure.designers :as designers]
             [euroclojure.motivation :as motivation]
             [euroclojure.meta-macro :as meta-macro]
