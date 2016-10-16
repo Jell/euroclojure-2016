@@ -42,6 +42,8 @@
 
                 :compiler {:main euroclojure.core
                            :asset-path "js/compiled/out"
+                           :closure-defines {"euroclojure.demo.href"
+                                             "http://localhost:3000/demo.html"}
                            :output-to "resources/public/js/compiled/euroclojure.js"
                            :output-dir "resources/public/js/compiled/out"
 
@@ -63,6 +65,8 @@
                            :foreign-libs [{:file "resources/webpack/bundle.js"
                                            :requires ["cljsjs/react"]
                                            :provides ["webpack-bundle"]}]
+                           :closure-defines {"euroclojure.demo.href"
+                                             "https://demo-checkout.zimpler.net/demo.html"}
                            :pretty-print false}}]}
 
   :figwheel {;; :http-server-root "public" ;; default and assumes "resources"
