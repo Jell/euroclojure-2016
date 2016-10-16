@@ -1,10 +1,17 @@
 (ns euroclojure.prototype)
 
-(defn slide [context]
+(defn slide [{:keys [speaker]}]
   [:div.slide.left
-   [:h2 "Prototype Fast"]
-   [:h3 "Need to be same order of magnitude as Rails"]
+   [:h1 "Prototype"]
    [:ul
-    [:li "Need to have something close to production ready fast"]
-    [:li "Need testing (without editor integration)"]
-    [:li "Need to be ready for extra challenges"]]])
+    [:li "Designer works on HTML + SASS mockup"]
+    (when speaker
+      [:p "No need to wait for developers to setup tools to get started, use any tool that focuses on HTML+CSS"])
+    [:li "Developers work on state management"]
+    (when speaker
+      [:p "API calls, Deploy script, tests"])
+    [:li "Use HTML mockup directly as template using enfocus"]
+    (when speaker
+      [:p "will explain in a moment"])
+    [:li "Use pure-HTML as " [:em "lingua franca"]]]
+   [:em "Wow factor: parallel work from ground up, no wasted cycles"]])

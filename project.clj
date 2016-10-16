@@ -13,7 +13,9 @@
                  [reagent "0.6.0-rc" :exclusions [cljsjs/react]]
                  [cljsjs/react-with-addons "15.3.1-0"]
                  [kioo "0.4.2" :exclusions [cljsjs/react om]]
-                 [org.clojure/data.codec "0.1.0"]]
+                 [org.clojure/data.codec "0.1.0"]
+                 [enfocus "2.1.1"]
+                 [com.taoensso/tower "3.0.2"]]
 
   :plugins [[lein-figwheel "0.5.4-7"]
             [lein-cljsbuild "1.1.3" :exclusions [[org.clojure/clojure]]]]

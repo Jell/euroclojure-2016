@@ -1,7 +1,6 @@
 (ns euroclojure.core
   (:require-macros [euroclojure.inline :refer [inline-file]])
   (:require [reagent.core :as reagent]
-            reagent.dom
             [euroclojure.introduction :as introduction]
             [euroclojure.no-details :as no-details]
             [euroclojure.meta-meta :as meta-meta]
@@ -11,21 +10,24 @@
             [euroclojure.starting :as starting]
             [euroclojure.what_kind_of_app :as what_kind_of_app]
             [euroclojure.demo :as demo]
+            [euroclojure.prototype :as prototype]
+            [euroclojure.enfocus-demo :as enfocus-demo]
+            [euroclojure.feedback-loop :as feedback-loop]
+            [euroclojure.improve :as improve]
             [euroclojure.architecture :as architecture]
             [euroclojure.designers :as designers]
             [euroclojure.motivation :as motivation]
             [euroclojure.meta-macro :as meta-macro]
-            [euroclojure.solution-1 :as solution-1]
+            [euroclojure.reagent-demo :as reagent-demo]
             [euroclojure.solution-1-tradeoffs :as solution-1-tradeoffs]
-            [euroclojure.solution-2 :as solution-2]
+            [euroclojure.kioo-demo :as kioo-demo]
             [euroclojure.solution-2-tradeoffs :as solution-2-tradeoffs]
-            [euroclojure.solution-3 :as solution-3]
+            [euroclojure.jsx-demo :as jsx-demo]
             [euroclojure.solution-3-tradeoffs :as solution-3-tradeoffs]
             [euroclojure.good-things :as good-things]
             [euroclojure.bad-things :as bad-things]
             [euroclojure.hacks :as hacks]
             [euroclojure.consensus :as consensus]
-            [euroclojure.prototype :as prototype]
             [euroclojure.conclusion :as conclusion]
             [euroclojure.thanks :as thanks]
             webpack-bundle))
@@ -47,18 +49,23 @@
              motivation/slide
              what_kind_of_app/slide
              demo/slide
-             #_architecture/slide
+             #_ architecture/slide
+             prototype/slide
+             enfocus-demo/slide
+             feedback-loop/slide
+             improve/slide
+
+             reagent-demo/slide
+             kioo-demo/slide
+             #_ solution-2-tradeoffs/slide
+
              designers/slide
-             solution-1/slide
-             solution-1-tradeoffs/slide
-             solution-2/slide
-             solution-2-tradeoffs/slide
-             solution-3/slide
-             solution-3-tradeoffs/slide
+             #_ solution-1-tradeoffs/slide
+             jsx-demo/slide
+             #_ solution-3-tradeoffs/slide
              good-things/slide
              bad-things/slide
              consensus/slide
-             #_prototype/slide
              conclusion/slide
              thanks/slide
              hacks/slide
