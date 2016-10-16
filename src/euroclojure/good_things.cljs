@@ -2,22 +2,27 @@
 
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
-   [:h2 "Good things"]
-   [:h3 "Made me love front-end work!"]
-   (when speaker
-     [:p "Passion and engagement is a business value. Also marketing, look at me talking about Zimpler here!"])
-   [:h3 "re-frame / reagent / single atom state"]
-   (when speaker
-     [:ul
-      [:li "On error, upload the whole state"]
-      [:li "Trivial time-travelling debugger"]
-      [:li [:em "Work in progress: "] "on error, upload time-travelling debug state!"]])
-   [:h3 "Gulp"]
-   (when speaker
-     [:ul
-      [:li "Possible workflow with or without ClojureScript"]
-      [:li "Task runner"]
-      [:li "Cache-busting URLs"]])
-   [:h3 "ClojureScript Macros"]
-   (when speaker
-     [:p "you have your own babel compiler"])])
+   [:h1 "Good things"]
+   [:ul
+    [:li "Made me love front-end work!"]
+    (when speaker
+      [:div "Passion and engagement is a business value. Also marketing, look at me talking about Zimpler here!"])
+    [:li "reagent / single atom state"]
+    (when speaker
+      [:div
+       [:span "On error, upload the whole state"]
+       [:br]
+       [:span "Trivial time-travelling debugger"]
+       [:br]
+       [:span [:em "Work in progress: "] "on error, upload time-travelling debug state!"]])
+    [:li "Gulp"]
+    (when speaker
+      [:div
+       [:span "Possible workflow with or without ClojureScript"]
+       [:br]
+       [:span "Task runner"]
+       [:br]
+       [:span "Cache-busting URLs"]])
+    [:li "ClojureScript Macros"]
+    (when speaker
+      [:div "you have your own babel compiler"])]])

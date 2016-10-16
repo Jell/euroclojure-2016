@@ -10,4 +10,10 @@
     (when speaker
       [:p "Where enfocus offered DOM transformations, kioo provides a
       macro that transforms HTML into reagent datastructures."])]
-   [:em "Wow factor: painlessly introduce react, transparent to designers"]])
+
+   [:em "Wow factor: painlessly introduce react, transparent to designers"]
+   (when speaker
+     [:div
+      [:p "structure organically growing from a single namespace. Routing logic growing? put in separate namespace."]
+      [:p "Clojure's data-first + libraries over framework = agile"]
+      ])])

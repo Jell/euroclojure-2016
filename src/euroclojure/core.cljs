@@ -1,30 +1,34 @@
 (ns euroclojure.core
   (:require-macros [euroclojure.inline :refer [inline-file]])
   (:require [reagent.core :as reagent]
-            [euroclojure.introduction :as introduction]
-            [euroclojure.no-details :as no-details]
-            [euroclojure.meta-meta :as meta-meta]
-            [euroclojure.zimpler :as zimpler]
-            [euroclojure.scale :as scale]
-            [euroclojure.starting :as starting]
-            [euroclojure.what_kind_of_app :as what_kind_of_app]
+            [euroclojure.bad-things :as bad-things]
+            [euroclojure.conclusion :as conclusion]
+            [euroclojure.consensus :as consensus]
             [euroclojure.demo :as demo]
-            [euroclojure.prototype :as prototype]
+            [euroclojure.designers :as designers]
             [euroclojure.enfocus-demo :as enfocus-demo]
             [euroclojure.feedback-loop :as feedback-loop]
-            [euroclojure.improve :as improve]
-            [euroclojure.designers :as designers]
-            [euroclojure.motivation :as motivation]
-            [euroclojure.meta-macro :as meta-macro]
-            [euroclojure.reagent-demo :as reagent-demo]
-            [euroclojure.kioo-demo :as kioo-demo]
-            [euroclojure.jsx-demo :as jsx-demo]
+            [euroclojure.future :as future]
+            [euroclojure.going-live :as going-live]
             [euroclojure.good-things :as good-things]
-            [euroclojure.bad-things :as bad-things]
+            [euroclojure.gulp :as gulp]
             [euroclojure.hacks :as hacks]
-            [euroclojure.consensus :as consensus]
-            [euroclojure.conclusion :as conclusion]
+            [euroclojure.improve :as improve]
+            [euroclojure.introduction :as introduction]
+            [euroclojure.jsx-demo :as jsx-demo]
+            [euroclojure.kioo-demo :as kioo-demo]
+            [euroclojure.meta-macro :as meta-macro]
+            [euroclojure.meta-meta :as meta-meta]
+            [euroclojure.motivation :as motivation]
+            [euroclojure.no-details :as no-details]
+            [euroclojure.prototype :as prototype]
+            [euroclojure.reagent-demo :as reagent-demo]
+            [euroclojure.scale :as scale]
+            [euroclojure.starting :as starting]
             [euroclojure.thanks :as thanks]
+            [euroclojure.tools :as tools]
+            [euroclojure.what_kind_of_app :as what_kind_of_app]
+            [euroclojure.zimpler :as zimpler]
             webpack-bundle))
 
 (enable-console-print!)
@@ -39,26 +43,32 @@
              meta-meta/slide
              zimpler/slide
              scale/slide
+
              starting/slide
              motivation/slide
              what_kind_of_app/slide
              demo/slide
+
              prototype/slide
              enfocus-demo/slide
              feedback-loop/slide
              improve/slide
-
              reagent-demo/slide
              kioo-demo/slide
-
+             going-live/slide
+             gulp/slide
+             future/slide
              jsx-demo/slide
+
              designers/slide
              good-things/slide
              bad-things/slide
              consensus/slide
              conclusion/slide
+
              thanks/slide
              hacks/slide
+             tools/slide
              meta-macro/slide])
 
 (defn next-slide []
