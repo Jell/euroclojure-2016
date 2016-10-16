@@ -19,11 +19,8 @@
             [euroclojure.motivation :as motivation]
             [euroclojure.meta-macro :as meta-macro]
             [euroclojure.reagent-demo :as reagent-demo]
-            [euroclojure.solution-1-tradeoffs :as solution-1-tradeoffs]
             [euroclojure.kioo-demo :as kioo-demo]
-            [euroclojure.solution-2-tradeoffs :as solution-2-tradeoffs]
             [euroclojure.jsx-demo :as jsx-demo]
-            [euroclojure.solution-3-tradeoffs :as solution-3-tradeoffs]
             [euroclojure.good-things :as good-things]
             [euroclojure.bad-things :as bad-things]
             [euroclojure.hacks :as hacks]
@@ -43,13 +40,11 @@
              no-details/slide
              meta-meta/slide
              zimpler/slide
-             #_ me/slide
              scale/slide
              starting/slide
              motivation/slide
              what_kind_of_app/slide
              demo/slide
-             #_ architecture/slide
              prototype/slide
              enfocus-demo/slide
              feedback-loop/slide
@@ -57,12 +52,9 @@
 
              reagent-demo/slide
              kioo-demo/slide
-             #_ solution-2-tradeoffs/slide
 
-             designers/slide
-             #_ solution-1-tradeoffs/slide
              jsx-demo/slide
-             #_ solution-3-tradeoffs/slide
+             designers/slide
              good-things/slide
              bad-things/slide
              consensus/slide
