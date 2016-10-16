@@ -6,6 +6,5 @@
    [:ul
     [:li "Aim at empowering people"]
     [:li "Listen to pain-points"]
-    [:li "Be patient"]
-    [:li "Be prepared"]
+    [:li "Be patient, Be prepared"]
     [:li "Don't try to solve everything in ClojureScript"]]])

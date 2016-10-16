@@ -3,14 +3,17 @@
   (:require [reagent.core :as reagent]
             reagent.dom
             [euroclojure.introduction :as introduction]
-            [euroclojure.scale :as scale]
-            [euroclojure.me :as me]
+            [euroclojure.no-details :as no-details]
+            [euroclojure.meta-meta :as meta-meta]
             [euroclojure.zimpler :as zimpler]
+            [euroclojure.me :as me]
+            [euroclojure.scale :as scale]
+            [euroclojure.starting :as starting]
+            [euroclojure.what_kind_of_app :as what_kind_of_app]
             [euroclojure.demo :as demo]
             [euroclojure.architecture :as architecture]
             [euroclojure.designers :as designers]
             [euroclojure.motivation :as motivation]
-            [euroclojure.meta-meta :as meta-meta]
             [euroclojure.meta-macro :as meta-macro]
             [euroclojure.solution-1 :as solution-1]
             [euroclojure.solution-1-tradeoffs :as solution-1-tradeoffs]
@@ -35,15 +38,16 @@
                  :time 0}))
 
 (def slides [introduction/slide
-             #_ me/slide
-             zimpler/slide
-             motivation/slide
-             consensus/slide
-             prototype/slide
-             scale/slide
-             demo/slide
-             architecture/slide
+             no-details/slide
              meta-meta/slide
+             zimpler/slide
+             #_ me/slide
+             scale/slide
+             starting/slide
+             motivation/slide
+             what_kind_of_app/slide
+             demo/slide
+             #_architecture/slide
              designers/slide
              solution-1/slide
              solution-1-tradeoffs/slide
@@ -53,9 +57,11 @@
              solution-3-tradeoffs/slide
              good-things/slide
              bad-things/slide
-             hacks/slide
+             consensus/slide
+             prototype/slide
              conclusion/slide
              thanks/slide
+             hacks/slide
              meta-macro/slide])
 
 (defn next-slide []
@@ -128,7 +134,7 @@
      [:div
       [slide-transition {:transition-name transition
                          :index slide-index}
-       [(nth slides slide-index)]]
+       [(nth slides slide-index) {:speaker false}]]
       [controls slide-index]]]))
 
 (defn the-end []

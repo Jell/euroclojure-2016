@@ -1,7 +1,6 @@
 * Introduction
 
 * Won't go into details
-** But...
 
 * Meta Meta
 
@@ -10,25 +9,10 @@
 * Scale
 
 * Where did we start?
-** 3 Rails apps in production
-** AWS infrastructure
-** Don't like front-end stuff
-** Have a slack bot written in Clojure
-** Like Clojure
-** Value simplicity and agility
-** Believe in empowering people
-
-* Clojure vs Ruby
-** Where are things coming from?
-** Namespace
-** Single-pass compilation
 
 * Motivation
 
 * What kind of app?
-** Pure front-end talking to API
-** Keep backend logic in existing Rails app
-** Turn Rails app into pure JSON REST API
 
 * Prototyping - Phase 1
 ** Designer works on HTML + CSS (SASS) prototype
@@ -116,6 +100,11 @@
 * Bad things
 
 * Consensus
+
+* Clojure vs Ruby
+** Where are things coming from?
+** Namespace
+** Single-pass compilation
 
 * Conclusion
 

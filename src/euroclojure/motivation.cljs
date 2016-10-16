@@ -1,17 +1,19 @@
 (ns euroclojure.motivation
   (:require [euroclojure.icons :as icons]))
 
-(defn slide [context]
+(defn slide [{:keys [speaker]}]
   [:div.slide.left
    [:h2 "Goal: New checkout Application"]
-   [:h3 "Starting point"]
+   [:h3 "Existing pain-points with Rails app"]
    [:ul
-    [:li icons/monorail " existing Rails app (backend+frontend)"]
-    [:li icons/cold-sweat " know nothing about (modern) front-end"]
-    [:li icons/expressionless " JavaScript semantics"]
-    [:li icons/heart " Clojure semantics"]]
-
+    [:li "Braided flow, state and view logic"]
+    (when speaker
+      [:p "checkout = step-through wizard with lots of branching"])
+    [:li "Slow tests"]
+    [:li "Annoying to deal with templates and localization"]
+    [:li "Devs are the bottleneck to any change"]]
    [:h3 "Constraints"]
    [:ul
-    [:li "Designers should be empowered"]
-    [:li "Programmers should not need Emacs"]]])
+    [:li "Programmers should not need Emacs"]
+    (when speaker
+      [:p "To be clear: shouldn't need to != should not. I use Emacs"])]])
