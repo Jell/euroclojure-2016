@@ -5,7 +5,6 @@
             [euroclojure.no-details :as no-details]
             [euroclojure.meta-meta :as meta-meta]
             [euroclojure.zimpler :as zimpler]
-            [euroclojure.me :as me]
             [euroclojure.scale :as scale]
             [euroclojure.starting :as starting]
             [euroclojure.what_kind_of_app :as what_kind_of_app]
