@@ -22,13 +22,14 @@
             [euroclojure.meta-meta :as meta-meta]
             [euroclojure.motivation :as motivation]
             [euroclojure.no-details :as no-details]
+            [euroclojure.not-epic :as not-epic]
             [euroclojure.prototype :as prototype]
             [euroclojure.reagent-demo :as reagent-demo]
             [euroclojure.scale :as scale]
             [euroclojure.starting :as starting]
             [euroclojure.thanks :as thanks]
             [euroclojure.tools :as tools]
-            [euroclojure.what_kind_of_app :as what_kind_of_app]
+            [euroclojure.what-kind-of-app :as what-kind-of-app]
             [euroclojure.zimpler :as zimpler]
             webpack-bundle))
 
@@ -47,9 +48,10 @@
 
              starting/slide
              motivation/slide
-             what_kind_of_app/slide
+             what-kind-of-app/slide
              demo/slide
 
+             not-epic/slide
              prototype/slide
              enfocus-demo/slide
              feedback-loop/slide

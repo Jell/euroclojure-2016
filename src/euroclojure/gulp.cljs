@@ -5,11 +5,15 @@
    [:h1 "Gulp"]
    [:ul
     [:li "JavaScript build tool / task runner"]
+    [:li "Can help integrating with a ton of JavaScript tooling"]
     (when speaker
-      [:p "Can run SASS compiler + figwheel with gulp dev task"])
-    [:li "Manage bower dependencies"]
+      [:ul
+       [:li "Manage JavaScript & CSS dependencies"]
+       [:li "Can compile SASS and minify CSS"]
+       [:li "run webpack"]
+       [:li "Cache-busting (replacing grunt)"]])
     [:li "Can run parallel tasks"]
-    [:li "Can implement custom watchers (reload templates)"]
-    [:li "Can compile SASS and minify CSS"]
-    [:li "Cache-busting (replacing grunt)"]
-    [:li "Not bound to ClojureScript"]]])
+    [:li "Not bound to ClojureScript"]
+    [:div "JavaScript tooling moves very fast! Waiting for
+       ClojureScript to catch up = lagging behind. Integrating Cljs
+       inside JS workflow worked better for us."]]])
