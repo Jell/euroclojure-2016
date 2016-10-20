@@ -14,6 +14,7 @@
        [:li "Cache-busting (replacing grunt)"]])
     [:li "Can run parallel tasks"]
     [:li "Not bound to ClojureScript"]
-    [:div "JavaScript tooling moves very fast! Waiting for
+    (when speaker
+      [:div "JavaScript tooling moves very fast! Waiting for
        ClojureScript to catch up = lagging behind. Integrating Cljs
-       inside JS workflow worked better for us."]]])
+       inside JS workflow worked better for us."])]])
