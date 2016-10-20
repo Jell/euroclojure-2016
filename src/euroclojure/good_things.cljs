@@ -7,8 +7,11 @@
     [:li "Made me love front-end work!"]
     (when speaker
       [:div "Passion and engagement is a business value. Also marketing, look at me talking about Zimpler here!"])
-    [:li "reagent / single atom state"]
+    [:li "Organically grow the project"]
     (when speaker
+      [:div "only add abstractions when needed"])
+    #_[:li "reagent / single atom state"]
+    #_(when speaker
       [:div
        [:span "On error, upload the whole state"]
        [:br]
@@ -23,6 +26,6 @@
        [:span "Task runner"]
        [:br]
        [:span "Cache-busting URLs"]])
-    [:li "ClojureScript Macros"]
-    (when speaker
+    #_[:li "ClojureScript Macros"]
+    #_(when speaker
       [:div "you have your own babel compiler"])]])

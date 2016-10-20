@@ -64,8 +64,8 @@
              jsx-demo/slide
 
              designers/slide
-             good-things/slide
              bad-things/slide
+             good-things/slide
              consensus/slide
              conclusion/slide
 

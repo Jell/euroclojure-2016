@@ -5,6 +5,7 @@
    [:h1 "Introduce React"]
    [:ul
     [:li "direct DOM-manipulation too slow in our case"]
+    [:li "maybe use virtual DOM?"]
     [:li "use reagent library to interop with React"]
     [:li "replace enfocus with kioo for templating"]
     (when speaker

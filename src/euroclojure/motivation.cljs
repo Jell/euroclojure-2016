@@ -8,12 +8,13 @@
    [:ul
     [:li "Braided flow, state and view logic"]
     (when speaker
-      [:p "checkout = step-through wizard with lots of branching"])
+      [:div "checkout = step-through wizard with lots of branching"])
     [:li "Slow tests"]
     [:li "Annoying to deal with templates and localization"]
     [:li "Devs are the bottleneck to any change"]]
    [:h3 "Constraints"]
    [:ul
-    [:li "Programmers should not need Emacs"]
+    [:li "Acceptable barrier of entry for new designers & developers"]
+    [:li "Bring your own editor (not everyone uses Emacs!)"]
     (when speaker
-      [:p "To be clear: shouldn't need to != should not. I use Emacs"])]])
+      [:div "To be clear: shouldn't need to != should not. I use Emacs"])]])

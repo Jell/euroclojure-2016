@@ -1,0 +1,37 @@
+* What is the information you want to transmit
+
+* Not enough why? Not enough depth?
+
+* Add diagram of where the code is
+
+* HTML + CSS + JS all coming from the server
+
+* Try to center stuff
+
+* Add picture to new goal slide
+
+* More explicit about which part is the actual app vs what are debug tools
+
+* mention that the whole state is stored in a huge map in memory in the browser
+
+* explain the time travelling during demo?
+
+* use different font for libraries
+
+* replace the slider with just the page number
+
+* remove namespace declaration in code example
+
+* More specific about why we chose ClojureScript
+
+* Started out as an experiment
+
+* a bit more whys
+
+* Might want to get rid of the code
+
+* center introduction title
+
+* Perhaps move details bad things / good things to appendix
+
+* Keep a single lesson learned slide
