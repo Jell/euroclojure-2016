@@ -123,6 +123,7 @@
                     {:onClick #(goto-slide slide-index index)
                      :style {:height "30px"
                              :padding 0
+                             :cursor "pointer"
                              :transition "all 0.4s ease"
                              :transform (when (= slide-index index)
                                           "translate(6px, -10px) scale(2.2,2.2)")}}]])
