@@ -13,16 +13,20 @@
              "#000"])
 
 (defn webcam []
-  [:> js/Webcam {:height "400px" :width "400px" :audio false}])
+  [:> js/Webcam {:height "300px" :width "400px" :audio false}])
 
-(defn meta-content []
+(defn meta-content [camera]
   [:div
-   [:h1 "Meta"]
-   [:p "Slides are demo are examples"]
-   [:a {:href "https://github.com/Jell/euroclojure-2016"
+   [:h2 "Meta"]
+   [:div "Slides written in Cljs"
+    [:br] "Demo of our prod setup"]
+   [:br]
+   camera
+   [:br]
+   [:br]
+   [:a.centered {:href "https://github.com/Jell/euroclojure-2016"
         :target "_blank"}
-    "https://github.com/Jell/euroclojure-2016"]
-   [:br]])
+    "https://github.com/Jell/euroclojure-2016"]])
 
 (defn slide-recursion [children n]
   [:div
@@ -30,21 +34,19 @@
                   :color (colors n)
                   :border-right "solid"
                   :border-radius "20px"
-                  :padding "5px 5%"
-                  :margin "2% 5%"
+                  :padding "5px 2%"
+                  :margin "0 5%"
                   :position "fixed"
-                  :width "80%"
+                  :width "85%"
                   :z-index (- 9999 n)
                   :float "left"}}
-    [meta-content]
-    [webcam]]
-   [:div {:style {:transform (str "scale(0.618,0.618)")
-                  :margin-left "30%"}}
+    [meta-content [webcam]]]
+   [:div {:style {:transform "translate(16%,50%) scale(0.618)"}}
     children]])
 
 (defn slide [{:keys [speaker]}]
-  [:div.slide.vertical-center {:style {:font-size "large"
-                                       :height "666px"}}
+  [:div.slide.vertical-center
+   {:style {:height "666px"}}
    (if speaker
-     [meta-content]
+     [meta-content nil]
      (reduce slide-recursion [:p "..."] (range 10)))])
