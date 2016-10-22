@@ -1,11 +1,22 @@
 (ns euroclojure.tools)
 
+(defn code-listing [& things]
+  [:div
+   (interpose ", " (map-indexed (fn [i thing] ^{:key i} [:code thing]) things))])
+
 (defn slide [opts]
   [:div.slide.left
+   [:h2 "Tools"]
    [:ul
     [:li "Libraries"]
-    [:div "core.async, tower, environ, schema, cljs-ajax, libphonenumber, stuartsierra/component, react, reagent, re-frame, kioo, clj-time, bidi, cuerdas, cljsjs/clipboard"]
+    (code-listing "core.async" "tower" "environ" "schema"
+                  "cljs-ajax" "libphonenumber" "stuartsierra/component"
+                  "react" "reagent" "re-frame" "kioo" "clj-time"
+                  "bidi" "cuerdas" "cljsjs/clipboard")
+
     [:li "ClojureScript tooling"]
-    [:div "figwheel, lein-doo, piggieback, cider, nrepl, clj-webdriver"]
+    (code-listing "figwheel" "lein-doo" "piggieback" "cider" "nrepl" "clj-webdriver")
+
     [:li "General tooling"]
-    [:div "npm, bower, gulp, browser-sync, phantomjs, entr, foreman, make, sassc, find, touch, grep"]]])
+    (code-listing "npm" "bower" "gulp" "browser-sync" "phantomjs" "entr"
+                  "foreman" "make" "sassc" "find" "touch" "grep")]])

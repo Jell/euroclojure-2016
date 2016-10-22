@@ -6,10 +6,10 @@
    [:ul
     [:li "Externs"]
     [:li "Broken iOS safari JIT compiler on iPhone 4"]
-    [:li "Safari needs :static-fn compiler option"]
+    [:li "Safari needs " [:code ":static-fn"] " compiler option"]
     (when speaker
       [:div "means can't use figwheel in safari"])
-    [:li "Boilerplate for everything not Cljs"]
+    [:li "Boilerplate for everything not ClojureScript"]
     (when speaker
       [:div "lots of progress being made outside of cljs, you still need to follow that progress"])
     [:li "Familiarity is an issue, but not as bad as you might think"]

@@ -10,7 +10,7 @@
     [:li "Developers work on state management"]
     (when speaker
       [:p "API calls, Deploy script, tests"])
-    [:li "Use HTML mockup directly as template using enfocus"]
+    [:li "Use HTML mockup directly as template using " [:code "enfocus"]]
     (when speaker
       [:p "will explain in a moment"])
     [:li "Use pure-HTML as " [:em "lingua franca"]]]
