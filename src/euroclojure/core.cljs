@@ -67,11 +67,11 @@
              future/slide
              jsx-demo/slide
 
+             conclusion/slide
              designers/slide
              bad-things/slide
              good-things/slide
              consensus/slide
-             conclusion/slide
 
              thanks/slide
              localized/slide
