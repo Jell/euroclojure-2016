@@ -16,11 +16,7 @@
 
 * explain the time travelling during demo?
 
-* use different font for libraries
-
 * replace the slider with just the page number
-
-* remove namespace declaration in code example
 
 * More specific about why we chose ClojureScript
 

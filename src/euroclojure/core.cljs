@@ -83,6 +83,12 @@
   (swap! app-state assoc :transition "backward")
   (swap! app-state update :slide-index dec))
 
+(defn goto-slide [from to]
+  (swap! app-state assoc :transition (if (> from to)
+                                       "backward"
+                                       "forward"))
+  (swap! app-state assoc :slide-index to))
+
 (defn slide-transition [{:keys [transition-name index]} slide]
   [:> js/React.addons.CSSTransitionGroup
    {:component "div"
@@ -109,8 +115,13 @@
                   ^{:key index}
                   [:> js/Step {:style {:height "30px"
                                        :padding 0}}
-                   [:> js/StepLabel {:style {:height "30px"
-                                             :padding 0}}]])
+                   [:> js/StepLabel
+                    {:onClick #(goto-slide slide-index index)
+                     :style {:height "30px"
+                             :padding 0
+                             :transition "all 0.5s ease"
+                             :transform (when (= slide-index index)
+                                          "translate(4px, -8px) scale(2,2)")}}]])
                 slides)])
 
 (defn controls [slide-index]
