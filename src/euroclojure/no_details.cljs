@@ -2,7 +2,7 @@
 
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
-   [:h1 "Won't go into details"]
-   [:em "BUT..."]
+   [:h1.centered "Won't go into details"]
+   [:em.centered "BUT..."]
    (when speaker
      [:div "not much code"])])

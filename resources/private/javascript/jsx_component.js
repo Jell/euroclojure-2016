@@ -1,6 +1,5 @@
 import ActionFlightTakeoff from 'material-ui/svg-icons/action/flight-takeoff';
-var theBloodOfAngryMen = "red";
-var theDarkOfAgesPast = "black";
+var theBloodOfAngryMen="red", theDarkOfAgesPast="black";
 
 var JSXComponent = ({children, saysWhat}) =>
   <div className="slide">

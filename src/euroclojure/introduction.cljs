@@ -2,8 +2,8 @@
 
 (defn slide [context]
   [:div.slide.left
-   [:h2 "A Tale of ClojureScript in Production"]
-   [:h3 "A journey from Rails to ClojureScript"]
+   [:h2.centered "A Tale of ClojureScript in Production"]
+   [:h3.centered "A journey from Rails to ClojureScript"]
    [:ul
     [:li "Who are we?"]
     [:li "What are we aiming for?"]

@@ -7,6 +7,7 @@
             [euroclojure.demo :as demo]
             [euroclojure.designers :as designers]
             [euroclojure.enfocus-demo :as enfocus-demo]
+            [euroclojure.experiment :as experiment]
             [euroclojure.feedback-loop :as feedback-loop]
             [euroclojure.future :as future]
             [euroclojure.going-live :as going-live]
@@ -30,6 +31,7 @@
             [euroclojure.thanks :as thanks]
             [euroclojure.tools :as tools]
             [euroclojure.what-kind-of-app :as what-kind-of-app]
+            [euroclojure.why-clojurescript :as why-clojurescript]
             [euroclojure.zimpler :as zimpler]
             webpack-bundle))
 
@@ -41,6 +43,7 @@
                  :time 0}))
 
 (def slides [introduction/slide
+             not-epic/slide
              no-details/slide
              meta-meta/slide
              zimpler/slide
@@ -49,9 +52,10 @@
              starting/slide
              motivation/slide
              what-kind-of-app/slide
+             why-clojurescript/slide
+             experiment/slide
              demo/slide
 
-             not-epic/slide
              prototype/slide
              enfocus-demo/slide
              feedback-loop/slide
@@ -119,9 +123,9 @@
                     {:onClick #(goto-slide slide-index index)
                      :style {:height "30px"
                              :padding 0
-                             :transition "all 0.5s ease"
+                             :transition "all 0.4s ease"
                              :transform (when (= slide-index index)
-                                          "translate(4px, -8px) scale(2,2)")}}]])
+                                          "translate(6px, -10px) scale(2.2,2.2)")}}]])
                 slides)])
 
 (defn controls [slide-index]
