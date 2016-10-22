@@ -2,7 +2,7 @@
 
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
-   [:h1 "Good things"]
+   [:h1.centered "Good things"]
    [:ul
     [:li "Made me love front-end work!"]
     (when speaker

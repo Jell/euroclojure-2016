@@ -2,7 +2,7 @@
 
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
-   [:h2 "Working with Designers"]
+   [:h1.centered "Working with Designers"]
    [:ul
 
     [:li [:b "Profile 1: "] "Wants to work with PhotoShop"]

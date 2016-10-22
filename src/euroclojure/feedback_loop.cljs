@@ -2,7 +2,7 @@
 
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
-   [:h1 "Shorten feedback loop"]
+   [:h1.centered "Shorten feedback loop"]
    [:ul
     [:li "Introduce " [:code "figwheel"] " for live code reload"]
     (when speaker

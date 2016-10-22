@@ -2,7 +2,7 @@
 
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
-   [:h1 "The future?"]
+   [:h1.centered "The future?"]
    [:h2 "Webpack"]
    [:ul
     [:li "Many " [:code "React"] " libraries require using " [:code "webpack"]]

@@ -2,7 +2,7 @@
 
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
-   [:h1 "Why ClojureScript?"]
+   [:h1.centered "Why ClojureScript?"]
    [:ul
     [:li "Framework or Libraries?"]
     (when speaker

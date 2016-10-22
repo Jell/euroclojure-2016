@@ -2,7 +2,7 @@
 
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
-   [:h1 "Gulp"]
+   [:h1.centered "Gulp"]
    [:ul
     [:li "JavaScript build tool / task runner"]
     [:li "Can help integrating with a ton of JavaScript tooling"]

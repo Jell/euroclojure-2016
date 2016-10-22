@@ -2,7 +2,7 @@
 
 (defn slide [context]
   [:div.slide.left
-   [:h2 "Consensus first!"]
+   [:h1.centered "Consensus first!"]
    [:ul
     [:li "Everyone needs to be onboard"]
     [:li "Try to stay objective as much as possible"]

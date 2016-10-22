@@ -2,7 +2,7 @@
 
 (defn slide [context]
   [:div.slide.left
-   [:h2 "Lessons learned"]
+   [:h1.centered "Lessons learned"]
    [:ul
     [:li "Aim at empowering people"]
     [:li "Listen to pain-points"]

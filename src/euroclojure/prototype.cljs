@@ -2,7 +2,7 @@
 
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
-   [:h1 "Prototype"]
+   [:h1.centered "Prototyping"]
    [:ul
     [:li "Designer works on HTML + CSS mockup"]
     (when speaker

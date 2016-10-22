@@ -2,7 +2,7 @@
 
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
-   [:h1 "Bad things"]
+   [:h1.centered "Bad things"]
    [:ul
     [:li "Externs"]
     [:li "Broken iOS safari JIT compiler on iPhone 4"]

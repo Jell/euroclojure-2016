@@ -2,7 +2,7 @@
 
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
-   [:h1 "What kind of app?"]
+   [:h1.centered "What kind of app?"]
    [:ul
     [:li "Keep backend logic in existing Rails app"]
     (when speaker

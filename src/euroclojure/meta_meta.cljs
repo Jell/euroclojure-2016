@@ -24,9 +24,10 @@
    camera
    [:br]
    [:br]
-   [:a.centered {:href "https://github.com/Jell/euroclojure-2016"
-        :target "_blank"}
-    "https://github.com/Jell/euroclojure-2016"]])
+   [:span.centered "Source: "
+    [:a {:href "https://github.com/Jell/euroclojure-2016"
+                  :target "_blank"}
+     "https://github.com/Jell/euroclojure-2016"]]])
 
 (defn slide-recursion [children n]
   [:div

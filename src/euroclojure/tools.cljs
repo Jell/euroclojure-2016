@@ -6,7 +6,7 @@
 
 (defn slide [opts]
   [:div.slide.left
-   [:h2 "Tools"]
+   [:h1.centered "Tools"]
    [:ul
     [:li "Libraries"]
     (code-listing "core.async" "tower" "environ" "schema"

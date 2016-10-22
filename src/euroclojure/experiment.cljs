@@ -4,7 +4,7 @@
   [:div.slide.left
    (when speaker
      [:div "To minimize risk and assess viability"])
-   [:h1 "2-weeks experiment"]
+   [:h1.centered "2-weeks experiment"]
    [:ul
     [:li "Is ClojureScript production ready?"]
     [:li "Can we be productive using ClojureScript?"]

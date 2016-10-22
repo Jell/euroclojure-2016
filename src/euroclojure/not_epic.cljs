@@ -2,7 +2,7 @@
 
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
-   [:h1 "The journey"]
+   [:h1.centered "The journey"]
    [:ul
     [:li "Not epic"]
     (when speaker

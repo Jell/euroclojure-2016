@@ -2,7 +2,7 @@
 
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
-   [:h1 "Introduce React"]
+   [:h1.centered "Introduce React"]
    [:ul
     [:li "direct DOM-manipulation too slow in our case"]
     [:li "maybe use virtual DOM?"]

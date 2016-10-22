@@ -2,7 +2,7 @@
 
 (defn slide [context]
   [:div.slide.left
-   [:h2 "Hacks"]
+   [:h1.centered "Hacks"]
    [:ul
     [:li "Run single test var from REPL"]
     [:a {:href "https://gist.github.com/Jell/76abeb78e8c472119079b951b1c2e9f5"

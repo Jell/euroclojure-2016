@@ -2,7 +2,7 @@
 
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
-   [:h1 "Going live"]
+   [:h1.centered "Going live"]
    [:ul
     [:li "Use PhraseApp + " [:code "tower"] " for localization"]
     [:li "Add cache busting using some custom script"]
