@@ -6,6 +6,8 @@
             [euroclojure.consensus :as consensus]
             [euroclojure.demo :as demo]
             [euroclojure.designers :as designers]
+            [euroclojure.diagram-cljs :as diagram-cljs]
+            [euroclojure.diagram-rails :as diagram-rails]
             [euroclojure.enfocus-demo :as enfocus-demo]
             [euroclojure.experiment :as experiment]
             [euroclojure.feedback-loop :as feedback-loop]
@@ -50,8 +52,10 @@
              scale/slide
 
              starting/slide
+             diagram-rails/slide
              motivation/slide
              what-kind-of-app/slide
+             diagram-cljs/slide
              why-clojurescript/slide
              experiment/slide
              demo/slide

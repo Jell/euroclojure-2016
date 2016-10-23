@@ -14,3 +14,4 @@ node_modules
 resources/webpack
 /resources/public/css/app.css
 /resources/public/css/app.css.map
+.DS_Store
