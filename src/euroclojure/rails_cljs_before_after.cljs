@@ -1,4 +1,4 @@
-(ns euroclojure.diagram-rails
+(ns euroclojure.rails-cljs-before-after
   (:require-macros [euroclojure.inline :refer [inline-file]]))
 
 (defn slide []
@@ -6,4 +6,4 @@
    [:div.diagram
     {:dangerouslySetInnerHTML
      {:__html
-      (inline-file "resources/public/images/RailsProcess.svg")}}]])
+      (inline-file "resources/public/images/RailsCljsBeforeAfter.svg")}}]])

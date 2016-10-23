@@ -6,4 +6,4 @@
    [:div.diagram
     {:dangerouslySetInnerHTML
      {:__html
-      (inline-file "resources/public/images/RailsCljs.svg")}}]])
+      (inline-file "resources/public/images/RailsCljsProcess.svg")}}]])

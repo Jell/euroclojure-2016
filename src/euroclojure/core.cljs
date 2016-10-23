@@ -27,6 +27,7 @@
             [euroclojure.no-details :as no-details]
             [euroclojure.not-epic :as not-epic]
             [euroclojure.prototype :as prototype]
+            [euroclojure.rails-cljs-before-after :as rails-cljs-before-after]
             [euroclojure.reagent-demo :as reagent-demo]
             [euroclojure.scale :as scale]
             [euroclojure.starting :as starting]
@@ -52,10 +53,11 @@
              scale/slide
 
              starting/slide
-             diagram-rails/slide
+             #_diagram-rails/slide
              motivation/slide
              what-kind-of-app/slide
-             diagram-cljs/slide
+             #_diagram-cljs/slide
+             rails-cljs-before-after/slide
              why-clojurescript/slide
              experiment/slide
              demo/slide
@@ -78,9 +80,9 @@
              consensus/slide
 
              thanks/slide
-             localized/slide
-             hacks/slide
              tools/slide
+             hacks/slide
+             localized/slide
              meta-macro/slide])
 
 (defn next-slide []
@@ -114,7 +116,7 @@
                   :height (str (- js/window.innerHeight 30) "px")}}
     slide]])
 
-(defn stepper-component [slide-index]
+(defn stepper-component [slide-index {:keys [speaker]}]
   [:> js/Stepper {:activeStep slide-index
                   :style {:width "90%"
                           :float "left"
@@ -129,18 +131,20 @@
                              :padding 0
                              :cursor "pointer"
                              :transition "all 0.4s ease"
-                             :transform (when (= slide-index index)
+                             :transform (when (and (= slide-index index)
+                                                   (not speaker))
                                           "translate(6px, -10px) scale(2.2,2.2)")}}]])
-                slides)])
+                (take-while (partial not= thanks/slide)
+                            slides))])
 
-(defn controls [slide-index]
+(defn controls [slide-index {:keys [speaker]}]
   [:div {:class "controls"
          :style {:height "30px"}}
    [:button (if (< 0 slide-index)
               {:on-click previous-slide}
               {:disabled true})
     "<"]
-   [stepper-component slide-index]
+   [stepper-component slide-index {:speaker speaker}]
    [:button (if (> (count slides) (inc slide-index))
               {:on-click next-slide}
               {:disabled true})
@@ -166,7 +170,7 @@
       [slide-transition {:transition-name transition
                          :index slide-index}
        [(nth slides slide-index) {:speaker false}]]
-      [controls slide-index]]]))
+      [controls slide-index {:speaker false}]]]))
 
 (defn the-end []
   [:div.slide.centered
@@ -199,7 +203,7 @@
         {:keys [slide-index]} @app-state]
     [theme
      [:div
-      [stepper-component slide-index]
+      [stepper-component slide-index {:speaker true}]
       [clock]
       [speaker-slide "left" (nth slides slide-index)]
       [speaker-slide "right" (nth slides-plus-end (inc slide-index))]]]))
