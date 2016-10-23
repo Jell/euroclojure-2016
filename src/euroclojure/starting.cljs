@@ -7,10 +7,11 @@
     [:li "3 Ruby on Rails apps in production"]
     (when speaker
       [:div "with server-side rendered templates"])
-    [:li "Amazon Web Services cloud infrastructure"]
-    [:li "\"Don't like front-end stuff\""]
+    [:li "Including a first version of our Checkout"]
     (when speaker
-      [:div "Rationalisation, bias to deal with complexity, been exposed to \"bad\" practices, don't know how to do stuff"])
-    [:li "Value simplicity and agility"]
-    [:li "Believe in empowering people"]
-    [:li "Have a slack bot written in Clojure"]]])
+      [:div "spoilers: this is where we'll introduce ClojureScript"])
+    [:li "Just hired our first Designer"]
+    [:li "Planning to add a lot of new features to our checkout"
+     (when speaker
+       "in particular, new payment methods which will require massive
+changes and more branching in our flow")]]])

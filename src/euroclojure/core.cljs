@@ -4,6 +4,7 @@
             [euroclojure.bad-things :as bad-things]
             [euroclojure.conclusion :as conclusion]
             [euroclojure.consensus :as consensus]
+            [euroclojure.constraints :as constraints]
             [euroclojure.demo :as demo]
             [euroclojure.designers :as designers]
             [euroclojure.diagram-cljs :as diagram-cljs]
@@ -16,9 +17,11 @@
             [euroclojure.good-things :as good-things]
             [euroclojure.gulp :as gulp]
             [euroclojure.hacks :as hacks]
+            [euroclojure.here-we-are :as here-we-are]
             [euroclojure.improve :as improve]
             [euroclojure.introduction :as introduction]
             [euroclojure.jsx-demo :as jsx-demo]
+            [euroclojure.goal :as goal]
             [euroclojure.kioo-demo :as kioo-demo]
             [euroclojure.localized :as localized]
             [euroclojure.meta-macro :as meta-macro]
@@ -26,15 +29,21 @@
             [euroclojure.motivation :as motivation]
             [euroclojure.no-details :as no-details]
             [euroclojure.not-epic :as not-epic]
+            [euroclojure.oh-noes :as oh-noes]
+            [euroclojure.phase1 :as phase1]
+            [euroclojure.phase2 :as phase2]
             [euroclojure.prototype :as prototype]
             [euroclojure.rails-cljs-before-after :as rails-cljs-before-after]
             [euroclojure.reagent-demo :as reagent-demo]
             [euroclojure.scale :as scale]
+            [euroclojure.selling-points :as selling-points]
             [euroclojure.starting :as starting]
             [euroclojure.thanks :as thanks]
             [euroclojure.tools :as tools]
+            [euroclojure.we-are-live :as we-are-live]
             [euroclojure.what-kind-of-app :as what-kind-of-app]
             [euroclojure.why-clojurescript :as why-clojurescript]
+            [euroclojure.wrappingup :as wrappingup]
             [euroclojure.zimpler :as zimpler]
             webpack-bundle))
 
@@ -50,38 +59,51 @@
              no-details/slide
              meta-meta/slide
              zimpler/slide
+             demo/slide
              scale/slide
 
              starting/slide
-             #_diagram-rails/slide
              motivation/slide
+             goal/slide
+             constraints/slide
              what-kind-of-app/slide
-             #_diagram-cljs/slide
-             rails-cljs-before-after/slide
+             #_ diagram-rails/slide
+             #_ diagram-cljs/slide
+             #_ rails-cljs-before-after/slide
              why-clojurescript/slide
-             experiment/slide
-             demo/slide
+             selling-points/slide
+             #_ experiment/slide
+
+             phase1/slide
 
              prototype/slide
              enfocus-demo/slide
              feedback-loop/slide
              improve/slide
-             reagent-demo/slide
              kioo-demo/slide
-             going-live/slide
-             gulp/slide
-             future/slide
-             jsx-demo/slide
 
-             conclusion/slide
+             phase2/slide
+
+             going-live/slide
+             we-are-live/slide
+             oh-noes/slide
+             gulp/slide
+             here-we-are/slide
+             future/slide
+
+             wrappingup/slide
+
              designers/slide
+             #_ conclusion/slide
              bad-things/slide
              good-things/slide
-             consensus/slide
+             #_ consensus/slide
 
              thanks/slide
              tools/slide
              hacks/slide
+             reagent-demo/slide
+             jsx-demo/slide
              localized/slide
              meta-macro/slide])
 

@@ -2,6 +2,9 @@
 
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
+   (when speaker
+     [:div "I've personally worked with 3 types of designers, so here
+     are ideas on how to empower them"])
    [:h1.centered "Working with Designers"]
    [:ul
 

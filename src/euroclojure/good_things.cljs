@@ -5,27 +5,11 @@
    [:h1.centered "Good things"]
    [:ul
     [:li "Made me love front-end work!"]
+    [:li "Organically grew the project & structure of the app"]
     (when speaker
-      [:div "Passion and engagement is a business value. Also marketing, look at me talking about Zimpler here!"])
-    [:li "Organically grow the project"]
+      [:div "only add abstractions when needed, many small steps"])
+    [:li "People got empowered"]
     (when speaker
-      [:div "only add abstractions when needed"])
-    #_[:li "reagent / single atom state"]
-    #_(when speaker
-      [:div
-       [:span "On error, upload the whole state"]
-       [:br]
-       [:span "Trivial time-travelling debugger"]
-       [:br]
-       [:span [:em "Work in progress: "] "on error, upload time-travelling debug state!"]])
-    [:li "Gulp"]
-    (when speaker
-      [:div
-       [:span "Possible workflow with or without ClojureScript"]
-       [:br]
-       [:span "Task runner"]
-       [:br]
-       [:span "Cache-busting URLs"]])
-    #_[:li "ClojureScript Macros"]
-    #_(when speaker
-      [:div "you have your own babel compiler"])]])
+      [:div "Both devs and designers are getting more things faster
+      and independently. Designers are able to deploy changes on their
+      own, even A/B tests."])]])
