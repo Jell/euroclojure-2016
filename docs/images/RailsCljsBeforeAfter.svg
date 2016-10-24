@@ -224,9 +224,11 @@ x="1071"
 y="482"
 dx="0,0.3,0.3,-0.7,0.3,-0.7,0.5,-0.7,-0.5,0,0.5,0.3,-0.7"
 class="s1_1"
->ClojureScript</text>
+>Single Page App</text>
 
+<!--
 <image x="1327" y="412" width="96" height="96" xlink:href="images/clojurescript.svg" />
+-->
 
 <image x="713" y="401" width="79" height="94" xlink:href="images/rails.svg" />
 <image x="715" y="73" width="80" height="96" xlink:href="images/rails.svg" />
