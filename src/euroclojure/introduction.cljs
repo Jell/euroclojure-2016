@@ -8,6 +8,6 @@
    [:br]
    [:ul
     [:li "Who are we?"]
-    [:li "What are we aiming for?"]
-    [:li "How did ClojureScript help us reach our goals?"]
-    [:li "What have we learnt in the process?"]]])
+    [:li "What did we try to achieve?"]
+    [:li "What was it like to introduce ClojureScript?"]
+    [:li "What did we take away from our experience?"]]])
