@@ -10,7 +10,7 @@
     [:li "A mindful walk"]
     (when speaker
       [:div "many small steps, trying to be aware of ourselves and our
-      pain-points, patience"])
+      pain-points"])
     [:li "A lot of small surprises and happiness"]
     (when speaker
-      [:div "Hope to convey some of that feeling through some examples"])]])
+      [:div "I hope I can convey some of those feelings throughout my presentation"])]])

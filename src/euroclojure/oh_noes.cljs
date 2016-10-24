@@ -13,4 +13,6 @@
     [:em.centered "Big waste of time for us"]]
    (when speaker
      [:div "Just so you know, this is still a thing. The patch is in
-     the slides though."])])
+     the slides though."]
+   (when speaker
+     [:p "Running in prod for a while, keeps growing. Designers not satisfied with tooling, adding designer tools / libraries takes devs time. Introducing..."]))])

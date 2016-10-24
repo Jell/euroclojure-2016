@@ -13,12 +13,12 @@
       script, tests. Also the app needs a lot of state management, so
       this part needed a lot of consideration. I call it the backend
       of the frontend but no one likes that"])
-    (when speaker
-      [:div "the fact that we could develop the flow logic completely
-      independently from the view logic helped us a lot in the
-      beginning, it made it so we did no step on each other's toes"])
     [:li "Whole state contained in a single atom"]
     [:li "View is a pure function of the state"]
-    [:li "Use HTML mockup directly as template using " [:code "enfocus"]]]
+    [:li "Use HTML mockup directly as template using " [:code "enfocus"]]
+    (when speaker
+      [:div "the fact that we could develop the flow logic completely
+      independently from the rendering implementation helped us a lot in the
+      beginning, it made it so we did no step on each other's toes"])]
    (when-not speaker
      [:em "Wow factor: parallel work from ground up, no wasted cycles"])])

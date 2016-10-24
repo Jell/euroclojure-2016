@@ -5,7 +5,7 @@
    (when speaker
      [:div "I've personally worked with 3 types of designers, so here
      are ideas on how to empower them"])
-   [:h1.centered "Working with Designers"]
+   [:h1.centered "Designers, React & ClojureScript"]
    [:ul
 
     [:li [:b "Profile 1: "] "Wants to work with PhotoShop"]

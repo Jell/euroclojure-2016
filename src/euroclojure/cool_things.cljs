@@ -6,5 +6,5 @@
    [:h1.centered "Cool things"]
    [:ul
     [:li "Upload whole app state on exceptions"]
-    [:li "Time-travelling debugger"]
-    [:li "REPL-driven tests (" demo/link ")"]]])
+    [:li "REPL-driven tests"]
+    [:li "Time-travelling debugger (" demo/link ")"]]])

@@ -8,7 +8,9 @@
     [:li "Namespaces"]
     [:li "Dead-code elimination"]
     [:li "Big standard library (Google Closure)"]
+    (when speaker [:h2 "breathe"])
     [:li "Seamless JavaScript interop"]
+    (when speaker [:div "safe bet, we can use the whole JS ecosystem"])
     [:li "Static name resolution"]
 
     (when speaker

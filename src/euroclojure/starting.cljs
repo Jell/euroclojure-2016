@@ -13,5 +13,5 @@
     [:li "Just hired our first Designer"]
     [:li "Planning to add a lot of new features to our checkout"
      (when speaker
-       "in particular, new payment methods which will require massive
+       " in particular, new payment methods which will require massive
 changes and more branching in our flow")]]])
