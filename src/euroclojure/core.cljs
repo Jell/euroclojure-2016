@@ -97,7 +97,7 @@
 
              wrappingup/slide
 
-             designers/slide
+             #_ designers/slide
              #_ conclusion/slide
              bad-things/slide
              good-things/slide

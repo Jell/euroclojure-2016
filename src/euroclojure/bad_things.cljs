@@ -12,7 +12,6 @@
       [:div "many iterations to get to where we are"])
     [:li "the iPhone 4 bug"]
     (when speaker
-      [:div "alredy mentioned, but biggest time sink"])
-    [:li "new tool = first blame"]]
+      [:div "alredy mentioned, but biggest time sink"])]
    (when speaker
      [:div "all in all, we don't regret the choice we made"])])

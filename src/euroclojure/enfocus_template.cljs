@@ -3,7 +3,7 @@
   (:require-macros [enfocus.macros :refer [deftemplate]]))
 
 (deftemplate render :compiled "templates/enfocus.html" []
-  ["#enfocus-says"] (ef/content "Hello EuroClojure!"))
+  ["#enfocus-says"] (ef/content "Dynamic Content"))
 
 (defn mount [node]
   (ef/at node "#enfocus"

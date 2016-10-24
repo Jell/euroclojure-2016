@@ -11,6 +11,8 @@
     (when speaker
       [:div "planning to hire more people, important that they don't
       get overwhelmed by our code"])
+    (when speaker
+      [:h2 "breathe"])
     [:li "Simple development environment"]
     (when speaker
       [:div "we don't want to force everyone to live inside emacs"])
