@@ -1,12 +1,10 @@
 (ns euroclojure.kioo-demo
   (:require-macros [euroclojure.utils :refer [code-snippet]])
-  (:require [kioo.reagent :as kioo :refer-macros [deftemplate]]))
+  (:require [euroclojure.kioo-template :as template]))
 
-(deftemplate slide "templates/kioo.html" []
-  {[:#kioo-says] (kioo/content "hello!")
-
-   [:#code-snippet]
-   (kioo/substitute
-    [:div
-     (code-snippet "html" "resources/private/templates/kioo.html")
-     (code-snippet "clojure" "src/euroclojure/kioo_demo.cljs")])})
+(defn slide [options]
+  [:div.slide
+   [template/render]
+   [:div
+    (code-snippet "html" "resources/private/templates/kioo.html")
+    (code-snippet "clojure" "src/euroclojure/kioo_template.cljs")]])

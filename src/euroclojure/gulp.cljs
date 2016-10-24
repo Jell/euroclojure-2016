@@ -17,7 +17,7 @@
        [:br]
        [:div "Cache-busting"]])
     [:li "Can run parallel tasks"]
-    [:li "In our experience, ClojureScript and leiningen are not been
+    [:li "In our experience, ClojureScript and leiningen have not been
     great with non-cljs tooling"]
     (when speaker
       [:div "SASS compilation with leiningen was slow, took time to

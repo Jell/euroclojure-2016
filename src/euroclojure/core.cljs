@@ -5,6 +5,7 @@
             [euroclojure.conclusion :as conclusion]
             [euroclojure.consensus :as consensus]
             [euroclojure.constraints :as constraints]
+            [euroclojure.cool-things :as cool-things]
             [euroclojure.demo :as demo]
             [euroclojure.designers :as designers]
             [euroclojure.diagram-cljs :as diagram-cljs]
@@ -23,6 +24,7 @@
             [euroclojure.jsx-demo :as jsx-demo]
             [euroclojure.goal :as goal]
             [euroclojure.kioo-demo :as kioo-demo]
+            [euroclojure.kioo-meta :as kioo-meta]
             [euroclojure.localized :as localized]
             [euroclojure.meta-macro :as meta-macro]
             [euroclojure.meta-meta :as meta-meta]
@@ -69,7 +71,7 @@
              what-kind-of-app/slide
              #_ diagram-rails/slide
              #_ diagram-cljs/slide
-             #_ rails-cljs-before-after/slide
+             rails-cljs-before-after/slide
              why-clojurescript/slide
              selling-points/slide
              #_ experiment/slide
@@ -81,6 +83,7 @@
              feedback-loop/slide
              improve/slide
              kioo-demo/slide
+             #_ kioo-meta/slide
 
              phase2/slide
 
@@ -88,6 +91,7 @@
              we-are-live/slide
              oh-noes/slide
              gulp/slide
+             cool-things/slide
              here-we-are/slide
              future/slide
 

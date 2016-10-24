@@ -4,20 +4,19 @@
   [:div.slide.left
    [:h1.centered "Early Pivot"]
    [:ul
-    [:li "that approach to DOM-manipulation"]
+    [:li "Direct DOM-manipulation on each state change was too slow!"]
+    [:li "Can we keep the logic but speedup rendering?"]
     (when speaker
       [:ul
        [:li "there was this library called React"]
-       [:li "React too big"]
-       [:li "enfocus too slow"]
-       [:li "drop-in replacement, fast-enough without manual optimization"]])
-    [:li "Why not " [:code "React"] " from the beginning?"]
-    [:li "We chose " [:code "reagent"]]
+       [:li "seemed to adress exactly this issue"]])
+    [:li "What about " [:code "React"] "?"]
     (when speaker
-      [:div " a ClojureScript library that wraps " [:code "React"]])
-    [:li "Use " [:code "kioo"]  " for templating (Drop-in replacement for " [:code "enfocus"] ")"]
+      [:div "we looked at our options, settled for"])
+    [:li "=> " [:code "reagent"] "!"]
     (when speaker
-      [:div "we really like the flow we had, so we wanted to make sure
-      we kept it when transitioning to React"])]
+      [:div " a ClojureScript library that wraps " [:code "React"] " in idiomatic Clojure"])
+    [:li "Use " [:code "kioo"]  " for templating (Drop-in replacement for " [:code "enfocus"] ")"]]
 
-   [:em "Personal Thought: How painless this transition was gave me confidence in the viability of ClojureScript"]])
+   [:em "Wow factor: painless transition to React, transparent to the
+   designers"]])
