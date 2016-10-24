@@ -6,11 +6,11 @@
    [:ul
     [:li "Not epic"]
     (when speaker
-      [:div "No epic battles, no fights"])
+      [:div "No battles, no fights, no great victories or epic failures"])
     [:li "A mindful walk"]
     (when speaker
       [:div "many small steps, trying to be aware of ourselves and our
       pain-points"])
-    [:li "A lot of small surprises and happiness"]
+    [:li "Many small surprises and moments of happiness"]
     (when speaker
-      [:div "I hope I can convey some of those feelings throughout my presentation"])]])
+      [:div "I hope I can convey some of those feelings during my presentation"])]])
