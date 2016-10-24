@@ -3,4 +3,6 @@
 (defn slide [{:keys [speaker]}]
   [:div.slide.centered
    [:h1 "Wrapping up"]
-   [:p "Some take-away points..."]])
+   (if speaker
+     [:p "go over some of the conclusions we reached"]
+     [:p "Some take-away points..."])])

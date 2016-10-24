@@ -8,7 +8,7 @@
     [:li "JavaScript build tool / task runner"]
     (when speaker
       [:li "like leiningen, but for node.js"])
-    [:h3 "breathe"]
+    (when speaker [:h3 "breathe"])
     [:li "Can help integrating with a ton of JavaScript tooling"]
     (when speaker
       [:div

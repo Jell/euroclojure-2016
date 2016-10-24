@@ -13,6 +13,6 @@
     [:li "the iPhone 4 bug"]
     (when speaker
       [:div "alredy mentioned, but biggest time sink"])
-    [:li "Remember: new tool = first blame"]]
+    [:li "new tool = first blame"]]
    (when speaker
      [:div "all in all, we don't regret the choice we made"])])

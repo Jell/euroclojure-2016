@@ -3,8 +3,7 @@
 (defn slide [{:keys [speaker]}]
   [:div.slide.left
    (when speaker
-     [:div "I've personally worked with 3 types of designers, so here
-     are ideas on how to empower them"])
+     [:div "How to empower designers when working with React & ClojureScript?"])
    [:h1.centered "Designers, React & ClojureScript"]
    [:ul
 
