@@ -4,7 +4,7 @@
   [:div.slide.left
    [:h1.centered "Bad things"]
    [:ul
-    [:li "ClojureScript was out of our confort zone"]
+    [:li "ClojureScript was out of our comfort zone"]
     (when speaker
       [:div "some learning cost upfront"])
     [:li "Tooling setup overhead is still significant"]

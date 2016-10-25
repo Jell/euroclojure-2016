@@ -4,7 +4,7 @@
   [:div.slide.left
    [:h1.centered "Constraints"]
    [:ul
-    [:li "High aivalability"]
+    [:li "High availability"]
     (when speaker
       [:div "service that others consume, need to always be up"])
     [:li "Acceptable barrier of entry for new designers & developers"]
