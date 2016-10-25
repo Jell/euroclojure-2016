@@ -4,5 +4,5 @@
   [:div.slide.left
    [:h1.centered "MVP live!"]
    [:ul
-    ;; TODO: insert time it took to get there
+    [:li "Took us 3 months to be ready"]
     [:li "Start to focus on new features!"]]])
